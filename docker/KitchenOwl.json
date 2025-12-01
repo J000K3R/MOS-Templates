@@ -1,0 +1,85 @@
+{
+  "name": "KitchenOwl-All-in-one",
+  "repo": "tombursch/kitchenowl",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "bash",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://172.16.0.21:[PORT:8080]/",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/kitchenowl.png",
+  "category": [ "productivity" ],
+  "project": "https://github.com/TomBursch/kitchenowl",
+  "support": "https://github.com/TomBursch/kitchenowl/issues",
+  "description": "KitchenOwl is a smart self-hosted grocery list and recipe manager. Easily add items to your shopping list before you go shopping. You can also create recipes and get suggestions on what you want to cook. Track your expenses so you know how much you've spent.",
+  "donate": "https://github.com/sponsors/TomBursch",
+  "paths": [
+    {
+      "name": "Path /data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/kitchenowl",
+      "container": "/data"
+    }
+  ],
+  "ports": [
+    {
+      "name": "KitchenOwl UI",
+      "protocol": "tcp",
+      "host": "8123",
+      "container": "8080"
+    }
+  ],
+  "variables": [
+    {
+      "name": "JWT Secret (CHANGE THIS!)",
+      "key": "JWT_SECRET_KEY",
+      "value": "key",
+      "mask": true
+    },
+    {
+      "name": "OPEN_REGISTRATION",
+      "key": "OPEN_REGISTRATION",
+      "value": "false",
+      "mask": false
+    },
+    {
+      "name": "SMTP_HOST",
+      "key": "SMTP_HOST",
+      "value": "mail.domain.com",
+      "mask": false
+    },
+    {
+      "name": "SMTP_PORT",
+      "key": "SMTP_PORT",
+      "value": "465",
+      "mask": false
+    },
+    {
+      "name": "SMTP_USER",
+      "key": "SMTP_USER",
+      "value": "mail@domain.com",
+      "mask": false
+    },
+    {
+      "name": "SMTP_PASS",
+      "key": "SMTP_PASS",
+      "value": "XXXX",
+      "mask": true
+    },
+    {
+      "name": "SMTP_FROM",
+      "key": "SMTP_FROM",
+      "value": "mail@domain.com",
+      "mask": false
+    },
+    {
+      "name": "FRONT_URL",
+      "key": "FRONT_URL",
+      "value": "https://kitchenowl.domain.com",
+      "mask": false
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
