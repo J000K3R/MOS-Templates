@@ -1,0 +1,97 @@
+{
+  "name": "code-server",
+  "repo": "lscr.io/linuxserver/code-server",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "bash",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": "",
+  "web_ui_url": "http://[IP]:[PORT:8443]",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/visual-studio-code.png",
+  "category": [ "productivity" ],
+  "project": "https://github.com/microsoft/vscode",
+  "support": "https://github.com/microsoft/vscode/issues",
+  "description": "Visual Studio Code combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle. It provides comprehensive code editing, navigation, and understanding support along with lightweight debugging, a rich extensibility model, and lightweight integration with existing tools.",
+  "donate": "https://code.visualstudio.com/",
+  "paths": [
+    {
+      "name": "Appdata",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/code-server/config",
+      "container": "/config"
+    },
+  ],
+  "ports": [
+    {
+      "name": "WebUI",
+      "protocol": "tcp",
+      "host": "8443",
+      "container": "8443"
+    }
+  ],
+  "variables": [
+    {
+      "name": "PASSWORD",
+      "key": "PASSWORD",
+      "value": "",
+      "mask": true
+    },
+    {
+      "name": "HASHED_PASSWORD",
+      "key": "HASHED_PASSWORD",
+      "value": "",
+      "mask": true
+    },
+    {
+      "name": "SUDO_PASSWORD",
+      "key": "SUDO_PASSWORD",
+      "value": "",
+      "mask": true
+    },
+    {
+      "name": "SUDO_PASSWORD_HASH",
+      "key": "SUDO_PASSWORD_HASH",
+      "value": "",
+      "mask": true
+    },
+    {
+      "name": "PROXY_DOMAIN",
+      "key": "PROXY_DOMAIN",
+      "value": "code-server.my.domain",
+      "mask": false
+    },
+    {
+      "name": "DEFAULT_WORKSPACE",
+      "key": "DEFAULT_WORKSPACE",
+      "value": "/config/workspace",
+      "mask": false
+    },
+    {
+      "name": "PWA_APPNAME",
+      "key": "PWA_APPNAME",
+      "value": "code-server",
+      "mask": false
+    },
+    {
+      "name": "PUID",
+      "key": "PUID",
+      "value": "500",
+      "mask": false
+    },
+    {
+      "name": "PGID",
+      "key": "PGID",
+      "value": "500",
+      "mask": false
+    },
+    {
+      "name": "UMASK",
+      "key": "UMASK",
+      "value": "022",
+      "mask": false
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
