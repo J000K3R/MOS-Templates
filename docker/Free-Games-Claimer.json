@@ -1,0 +1,102 @@
+{
+  "name": "free-games-claimer",
+  "repo": "ghcr.io/vogler/free-games-claimer",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "bash",
+  "privileged": false,
+  "extra_parameters": null,
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:6080]",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/free-games-claimer.png",
+  "category": [ "games" ],
+  "project": "https://github.com/vogler/free-games-claimer",
+  "support": "https://github.com/vogler/free-games-claimer/issues",
+  "description": "Claims free games periodically on Epic Games Store, Amazon Prime Gaming and GOG",
+  "donate": "https://github.com/sponsors/vogler",
+  "paths": [
+    {
+      "name": "FGC Data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/free-games-claimer/data",
+      "container": "/fgc/data"
+    }
+  ],
+  "ports": [
+    {
+      "name": "WebUI",
+      "protocol": "tcp",
+      "host": "6080",
+      "container": "6080"
+    }
+  ],
+  "variables": [
+    {
+      "name": "Generic Email",
+      "key": "EMAIL",
+      "value": "email",
+      "mask": false
+    },
+    {
+      "name": "Generic Password",
+      "key": "PASSWORD",
+      "value": "xxxx",
+      "mask": true
+    },
+    {
+      "name": "Epic Games Mail",
+      "key": "EG_EMAIL",
+      "value": "email",
+      "mask": false
+    },
+    {
+      "name": "Epic Games Password",
+      "key": "EG_PASSWORD",
+      "value": "xxxx",
+      "mask": true
+    },
+    {
+      "name": "Epic Games MFA OTP",
+      "key": "EG_OTPKEY",
+      "value": "key",
+      "mask": false
+    },
+    {
+      "name": "Prime Gaming Mail",
+      "key": "PG_EMAIL",
+      "value": "email",
+      "mask": false
+    },
+    {
+      "name": "Prime Gaming Password",
+      "key": "PG_PASSWORD",
+      "value": "xxxx",
+      "mask": true
+    },
+    {
+      "name": "Prime Gaming MFA OTP",
+      "key": "PG_OTPKEY",
+      "value": "key",
+      "mask": false
+    },
+    {
+      "name": "Prime Gaming Redeem on external store",
+      "key": "PG_REDEEM",
+      "value": "0",
+      "mask": false
+    },
+    {
+      "name": "GOG Mail",
+      "key": "GOG_EMAIL",
+      "value": "email",
+      "mask": false
+    },
+    {
+      "name": "GOG Password",
+      "key": "GOG_PASSWORD",
+      "value": "xxxx",
+      "mask": true
+    }
+  ],
+  "devices": []
+}
