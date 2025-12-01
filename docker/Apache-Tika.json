@@ -12,7 +12,7 @@
   "category": [ "productivity" ],
   "project": "https://github.com/apache/tika",
   "support": "https://issues.apache.org/jira/projects/TIKA/issues",
-  "description": "Apache Tika(™) is a toolkit for detecting and extracting metadata and structured text content from various documents using existing parser libraries.",
+  "description": "Apache Tika™ is a toolkit for detecting and extracting metadata and structured text content from various documents using existing parser libraries.",
   "donate": "https://donate.apache.org/",
   "paths": [],
   "ports": [
