@@ -1,0 +1,28 @@
+{
+  "name": "cloudflared",
+  "repo": "cloudflare/cloudflared:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart unless-stopped",
+  "post_parameters": "tunnel run XXXXX",
+  "web_ui_url": null,
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/cloudflare.png",
+  "category": [ "web" ],
+  "project": "https://github.com/cloudflare/cloudflared",
+  "support": "https://github.com/cloudflare/cloudflared/issues",
+  "description": "Contains the command-line client for Cloudflare Tunnel, a tunneling daemon that proxies traffic from the Cloudflare network to your origins. This daemon sits between Cloudflare network and your origin (e.g. a webserver). Cloudflare attracts client requests and sends them to you via this daemon, without requiring you to poke holes on your firewall your origin can remain as closed as possible.",
+  "donate": "https://www.cloudflare.com/de-de/",
+  "paths": [
+    {
+      "name": "data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/cloudflared",
+      "container": "/home/nonroot/.cloudflared/"
+    }
+  ],
+  "ports": [],
+  "variables": [],
+  "devices": []
+}
