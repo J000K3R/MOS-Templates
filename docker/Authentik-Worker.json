@@ -10,10 +10,10 @@
   "web_ui_url": null,
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/authentik.png",
   "category": [ "web" ],
-  "project": "https://github.com/goauthentik/authentik"
+  "project": "https://github.com/goauthentik/authentik",
   "support": "https://github.com/goauthentik/authentik/issues",
-  "description": "authentik is an open-source Identity Provider (IdP) for modern SSO. It supports SAML, OAuth2/OIDC, LDAP, RADIUS, and more, designed for self-hosting from small labs to large production clusters."
-  "donate": "https://goauthentik.io/pricing/"
+  "description": "authentik is an open-source Identity Provider (IdP) for modern SSO. It supports SAML, OAuth2/OIDC, LDAP, RADIUS, and more, designed for self-hosting from small labs to large production clusters.",
+  "donate": "https://goauthentik.io/pricing/",
   "paths": [
     {
       "name": "Backups",
