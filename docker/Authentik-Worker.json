@@ -1,0 +1,126 @@
+{
+  "name": "authentik-worker",
+  "repo": "ghcr.io/goauthentik/server:2025.10.2",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "bash",
+  "privileged": false,
+  "extra_parameters": "--restart unless-stopped -u root",
+  "post_parameters": "worker",
+  "web_ui_url": null,
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/authentik.png",
+  "category": [ "web" ],
+  "project": "https://github.com/goauthentik/authentik"
+  "support": "https://github.com/goauthentik/authentik/issues",
+  "description": "authentik is an open-source Identity Provider (IdP) for modern SSO. It supports SAML, OAuth2/OIDC, LDAP, RADIUS, and more, designed for self-hosting from small labs to large production clusters."
+  "donate": "https://goauthentik.io/pricing/"
+  "paths": [
+    {
+      "name": "Backups",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/authentik/backups",
+      "container": "/backups"
+    },
+    {
+      "name": "Media",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/authentik/media",
+      "container": "/media"
+    },
+    {
+      "name": "Certs",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/authentik/certs",
+      "container": "/certs"
+    },
+    {
+      "name": "Docker Socket",
+      "mode": "rw",
+      "host": "/var/run/docker.sock",
+      "container": "/var/run/docker.sock"
+    },
+    {
+      "name": "Custom Templates",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/authentik/templates",
+      "container": "/templates"
+    }
+  ],
+  "ports": [],
+  "variables": [
+    {
+      "name": "PostgreSQL Host",
+      "key": "AUTHENTIK_POSTGRESQL__HOST",
+      "value": "postgresql",
+      "mask": false
+    },
+    {
+      "name": "PostgreSQL DB User",
+      "key": "AUTHENTIK_POSTGRESQL__USER",
+      "value": "authentik",
+      "mask": false
+    },
+    {
+      "name": "PostgreSQL DB Name",
+      "key": "AUTHENTIK_POSTGRESQL__NAME",
+      "value": "authentik",
+      "mask": false
+    },
+    {
+      "name": "PostgreSQL DB Password",
+      "key": "AUTHENTIK_POSTGRESQL__PASSWORD",
+      "value": "",
+      "mask": true
+    },
+    {
+      "name": "Error Reporting",
+      "key": "AUTHENTIK_ERROR_REPORTING__ENABLED",
+      "value": "true",
+      "mask": false
+    },
+    {
+      "name": "Secret Key",
+      "key": "AUTHENTIK_SECRET_KEY",
+      "value": "",
+      "mask": true
+    },
+    {
+      "name": "AUTHENTIK_EMAIL__HOST",
+      "key": "AUTHENTIK_EMAIL__HOST",
+      "value": "mail.domain.com",
+      "mask": false
+    },
+    {
+      "name": "AUTHENTIK_EMAIL__PORT",
+      "key": "AUTHENTIK_EMAIL__PORT",
+      "value": "587",
+      "mask": false
+    },
+    {
+      "name": "AUTHENTIK_EMAIL__USERNAME",
+      "key": "AUTHENTIK_EMAIL__USERNAME",
+      "value": "mail@domain.com",
+      "mask": false
+    },
+    {
+      "name": "AUTHENTIK_EMAIL__PASSWORD",
+      "key": "AUTHENTIK_EMAIL__PASSWORD",
+      "value": "",
+      "mask": true
+    },
+    {
+      "name": "AUTHENTIK_EMAIL__USE_TLS",
+      "key": "AUTHENTIK_EMAIL__USE_TLS",
+      "value": "true",
+      "mask": false
+    },
+    {
+      "name": "AUTHENTIK_EMAIL__FROM",
+      "key": "AUTHENTIK_EMAIL__FROM",
+      "value": "mail@domain.com",
+      "mask": false
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
