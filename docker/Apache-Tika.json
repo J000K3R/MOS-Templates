@@ -8,7 +8,7 @@
   "extra_parameters": "--restart=unless-stopped",
   "post_parameters": null,
   "web_ui_url": null,
-  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/apache.png",
+  "icon": "https://github.com/J000K3R/MOS-Templates/blob/main/icons/apache.png",
   "category": [ "productivity" ],
   "project": "https://github.com/apache/tika",
   "support": "https://issues.apache.org/jira/projects/TIKA/issues",
