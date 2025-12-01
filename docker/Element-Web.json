@@ -1,0 +1,36 @@
+{
+  "name": "element-web",
+  "repo": "vectorim/element-web:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:80]",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/element.png",
+  "category": [ "cloud", "productivity", "network" ],
+  "project": "https://github.com/element-hq/element-web",
+  "support": "https://github.com/element-hq/element-web/issues",
+  "description": "Element (formerly known as Vector and Riot) is a Matrix web client built using the Matrix JS SDK.",
+  "donate": "https://element.io/de/pricing",
+  "paths": [
+    {
+      "name": "Appdata",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/element-web/config/config.json",
+      "container": "/app/config.json"
+    }
+  ],
+  "ports": [
+    {
+      "name": "Port",
+      "protocol": "tcp",
+      "host": "8075",
+      "container": "80"
+    }
+  ],
+  "variables": [],
+  "devices": [],
+  "gpus": []
+}
