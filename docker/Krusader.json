@@ -55,6 +55,12 @@
       "mask": false
     },
     {
+      "name": "RUNASROOT",
+      "key": "RUNASROOT",
+      "value": "false",
+      "mask": false
+    },
+    {
       "name": "UMASK",
       "key": "UMASK",
       "value": "000",
