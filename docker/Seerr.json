@@ -1,5 +1,5 @@
 {
-  "name": "jellyseerr",
+  "name": "seerr",
   "repo": "ghcr.io/fallenbagel/jellyseerr:latest",
   "network": "bridge",
   "custom_ip": null,
@@ -18,7 +18,7 @@
     {
       "name": "Appdata",
       "mode": "rw",
-      "host": "/mnt/cache/appdata/jellyseerr",
+      "host": "/mnt/cache/appdata/seerr",
       "container": "/app/config/"
     }
   ],
