@@ -39,7 +39,7 @@
     },
     {
       "name": "Emby Support",
-      "key": "JELLYFIN_TYPE",
+      "key": "SEERR_TYPE",
       "value": "type",
       "mask": false
     },
