@@ -20,7 +20,7 @@
       "mode": "rw",
       "host": "/mnt/cache/appdata/nextcloud",
       "container": "/config"
-    }
+    },
     {
       "name": "Data",
       "mode": "rw",
