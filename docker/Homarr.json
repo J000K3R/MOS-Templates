@@ -1,0 +1,49 @@
+{
+  "name": "homarr",
+  "repo": "ghcr.io/homarr-labs/homarr:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:7575]",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/homarr.png",
+  "category": [ "productivity" ],
+  "project": "https://github.com/homarr-labs/homarr",
+  "support": "https://github.com/homarr-labs/homarr/issues",
+  "description": "A sleek, modern dashboard that puts all of your apps and services at your fingertips. Control everything in one convenient location. Seamlessly integrates with the apps you've added, providing you with valuable information.",
+  "donate": "https://opencollective.com/homarr",
+  "paths": [
+    {
+      "name": "Appdata",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/homarr",
+      "container": "/appdata"
+    },
+    {
+      "name": "Docker Socket",
+      "mode": "rw",
+      "host": "/var/run/docker.sock",
+      "container": "/var/run/docker.sock"
+    }
+  ],
+  "ports": [
+    {
+      "name": "WebUI Port",
+      "protocol": "tcp",
+      "host": "7575",
+      "container": "7575"
+    }
+  ],
+  "variables": [
+    {
+      "name": "SECRET_ENCRYPTION_KEY",
+      "key": "SECRET_ENCRYPTION_KEY",
+      "value": "CREATE A NEW ONE WITH COMMAND openssl rand -hex 32",
+      "mask": false
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
