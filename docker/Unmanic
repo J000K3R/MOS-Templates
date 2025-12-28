@@ -1,0 +1,48 @@
+{
+  "name": "unmanic",
+  "repo": "josh5/unmanic:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:8888]",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/unmanic.png",
+  "category": [ "media" ],
+  "project": "https://github.com/Unmanic/unmanic",
+  "support": "https://github.com/Unmanic/unmanic/issues",
+  "description": "Unmanic is a simple tool for optimising your file library. You can use it to convert your files into a single, uniform format, manage file movements based on timestamps, or execute custom commands against a file based on its file size.",
+  "donate": "https://github.com/sponsors/Josh5",
+  "paths": [
+    {
+      "name": "Appdata",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/unmanic/",
+      "container": "/config"
+    },
+    {
+      "name": "Media Libary",
+      "mode": "rw",
+      "host": "/mnt/media/",
+      "container": "/library"
+    },
+    {
+      "name": "Cache Directory",
+      "mode": "rw",
+      "host": "/mnt/cache/temp",
+      "container": "/tmp/unmanic"
+    }
+  ],
+  "ports": [
+    {
+      "name": "WebUI Port",
+      "protocol": "tcp",
+      "host": "8888",
+      "container": "8888"
+    }
+  ],
+  "variables": [],
+  "devices": [],
+  "gpus": []
+}
