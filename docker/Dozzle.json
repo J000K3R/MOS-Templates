@@ -20,7 +20,7 @@
       "mode": "rw",
       "host": "/var/run/docker.sock",
       "container": "/var/run/docker.sock"
-    },
+    }
   ],
   "ports": [
     {
