@@ -1,0 +1,36 @@
+{
+  "name": "uptime-kuma",
+  "repo": "louislam/uptime-kuma:2",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "bash",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": "",
+  "web_ui_url": "http://[IP]:[PORT:3001]",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/uptime-kuma.png",
+  "category": [ "productivity" ],
+  "project": "https://github.com/louislam/uptime-kuma",
+  "support": "https://github.com/louislam/uptime-kuma/issues",
+  "description": "Uptime Kuma is an easy-to-use self-hosted monitoring tool.",
+  "donate": "https://github.com/sponsors/louislam",
+  "paths": [
+    {
+      "name": "Appdata",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/uptime-kuma",
+      "container": "uptime-kuma"
+    }
+  ],
+  "ports": [
+    {
+      "name": "WebUI",
+      "protocol": "tcp",
+      "host": "3001",
+      "container": "3001"
+    }
+  ],
+  "variables": [],
+  "devices": [],
+  "gpus": []
+}
