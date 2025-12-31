@@ -19,7 +19,7 @@
       "name": "Appdata",
       "mode": "rw",
       "host": "/mnt/cache/appdata/uptime-kuma",
-      "container": "/uptime-kuma"
+      "container": "/app/data"
     }
   ],
   "ports": [
