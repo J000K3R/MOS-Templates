@@ -24,7 +24,7 @@
   ],
   "ports": [
     {
-      "name": "Tika Port",
+      "name": "WebUI Port",
       "protocol": "tcp",
       "host": "8080",
       "container": "8080"
