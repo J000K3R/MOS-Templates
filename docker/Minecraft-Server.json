@@ -1,0 +1,79 @@
+{
+  "name": "minecraft-server",
+  "repo": "itzg/minecraft-server:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "bash",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": "",
+  "web_ui_url": "minecraft://[IP]:[PORT:25565]",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/minecraft.png",
+  "category": ["games"],
+  "project": "https://github.com/itzg/docker-minecraft-server",
+  "support": "https://github.com/itzg/docker-minecraft-server/issues",
+  "description": "This docker image provides a Minecraft Server that will automatically download the latest stable version at startup.",
+  "donate": "https://github.com/sponsors/itzg",
+  "paths": [
+    {
+      "name": "Server Data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/minecraft-server",
+      "container": "/data"
+    }
+  ],
+  "ports": [
+    {
+      "name": "MC_PORT",
+      "protocol": "tcp",
+      "host": "25565",
+      "container": "25565"
+    },
+    {
+      "name": "RCON_PORT",
+      "protocol": "tcp",
+      "host": "25575",
+      "container": "25575"
+    }
+  ],
+  "variables": [
+    {
+      "name": "EULA",
+      "key": "EULA",
+      "value": "TRUE",
+      "mask": false
+    },
+    {
+      "name": "Server Type",
+      "key": "TYPE",
+      "value": "AUTO_CURSEFORGE",
+      "mask": false
+    },
+    {
+      "name": "Memory",
+      "key": "MEMORY",
+      "value": "12G",
+      "mask": false
+    },
+    {
+      "name": "Enable RCON",
+      "key": "ENABLE_RCON",
+      "value": "true",
+      "mask": false
+    },
+    {
+      "name": "RCON Password",
+      "key": "RCON_PASSWORD",
+      "value": "",
+      "mask": true
+    },
+    {
+      "name": "RCON Port",
+      "key": "RCON_PORT",
+      "value": "25575",
+      "mask": false
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
