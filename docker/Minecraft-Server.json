@@ -46,7 +46,7 @@
     {
       "name": "Server Type",
       "key": "TYPE",
-      "value": "AUTO_CURSEFORGE",
+      "value": "VANILLA",
       "mask": false
     },
     {
