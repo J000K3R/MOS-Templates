@@ -70,6 +70,6 @@ services:
       - -c # this is to evaluate the $REDIS_PASSWORD from the env
       - valkey-server --requirepass $$REDIS_PASSWORD ## $$ because of docker-compose
     healthcheck: *redis-healthcheck
-    env_file: env/redis-cache.env
+    env_file: .env
     volumes:
       - ${NETBOX_REDIS_CACHE_DATA}:/data
