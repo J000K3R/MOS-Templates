@@ -15,7 +15,7 @@ services:
       timeout: 3s
       interval: 15s
     volumes:
-      - ${NETBOX_CONFIGURATION_DATA}:/etc/netbox/config:z,ro
+      - ${NETBOX_CONFIGURATION_DIR}:/etc/netbox/config:z,ro
       - ${NETBOX_MEDIA_FILES}:/opt/netbox/netbox/media:rw
       - ${NETBOX_REPORTS_FILES}:/opt/netbox/netbox/reports:rw
       - ${NETBOX_SCRIPTS_FILES}:/opt/netbox/netbox/scripts:rw
