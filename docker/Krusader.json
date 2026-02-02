@@ -69,13 +69,13 @@
     {
       "name": "UID",
       "key": "UID",
-      "value": "99",
+      "value": "500",
       "mask": false
     },
     {
       "name": "GID",
       "key": "GID",
-      "value": "100",
+      "value": "500",
       "mask": false
     }
   ],
