@@ -20,9 +20,9 @@
 #   TZ=UTC                 # Timezone (e.g., America/New_York)
 #   LOG_LEVEL=info         # Log level (debug, info, warn, error)
 #   PG_MAX_MEMORY=2GB      # PostgreSQL memory limit (auto-detected from mem_limit)
-#   tracearr_postgres      # PostgresSQL Data Mount
-#   tracearr_redis         # REDIS Data Mount
-#   tracearr_data          # Tracearr Data Mount
+#   tracearr_postgres=     # PostgresSQL Data Mount
+#   tracearr_redis=        # REDIS Data Mount
+#   tracearr_data=         # Tracearr Data Mount
 
 services:
   tracearr:
@@ -46,9 +46,9 @@ services:
       # - COOKIE_SECRET=${COOKIE_SECRET}
     volumes:
       # Docker managed volumes (recommended)
-      - ${tracearr_postgres}:/data/postgres
-      - ${tracearr_redis}:/data/redis
-      - ${tracearr_data}:/data/tracearr
+      - ${TRACEARR_POSTGRES}:/data/postgres
+      - ${TRACEARR_REDIS}:/data/redis
+      - ${TRACEARR_DATA}:/data/tracearr
       #
       # Bind mounts are not recommended for supervised installs
       # due to permission issues with PostgreSQL and Redis
