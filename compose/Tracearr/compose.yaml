@@ -35,10 +35,10 @@ services:
         soft: 65536
         hard: 65536  # TimescaleDB chunks require many file descriptors
     ports:
-      - "${PORT:-3000}:3000"
+      - "${PORT}:3000"
     environment:
-      - TZ=${TZ:-UTC}
-      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - TZ=${TZ}
+      - LOG_LEVEL=${LOG_LEVEL}
       # - DATABASE_POOL_MAX=50  # Database connection pool size (default: 50)
       # Secrets are auto-generated if not provided
       # Uncomment to override:
