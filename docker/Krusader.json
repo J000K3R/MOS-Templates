@@ -18,13 +18,15 @@
       "name": "Appdata",
       "mode": "rw",
       "host": "/mnt/cache/appdata/krusader",
-      "container": "/krusader"
+      "container": "/krusader",
+      "description": "Application data and configuration files."
     },
     {
       "name": "Filesystem MOS",
       "mode": "rw",
       "host": "/mnt/cache",
-      "container": "/mnt/cache"
+      "container": "/mnt/cache",
+      "description": "Access to MOS filesystem for file management operations."
     }
   ],
   "ports": [
@@ -32,7 +34,8 @@
       "name": "WebUI Port",
       "protocol": "tcp",
       "host": "8080",
-      "container": "8080"
+      "container": "8080",
+      "description": "Web interface port for accessing Krusader."
     }
   ],
   "variables": [
@@ -40,43 +43,50 @@
       "name": "USER_LOCALES",
       "key": "USER_LOCALES",
       "value": "en_US.UTF-8 UTF8",
-      "mask": false
+      "mask": false,
+      "description": "System locale settings for language and character encoding."
     },
     {
       "name": "CUSTOM_RES_W",
       "key": "CUSTOM_RES_W",
       "value": "1280",
-      "mask": false
+      "mask": false,
+      "description": "Custom screen resolution width in pixels."
     },
     {
       "name": "CUSTOM_RES_H",
       "key": "CUSTOM_RES_H",
       "value": "1024",
-      "mask": false
+      "mask": false,
+      "description": "Custom screen resolution height in pixels."
     },
     {
       "name": "RUNASROOT",
       "key": "RUNASROOT",
       "value": "false",
-      "mask": false
+      "mask": false,
+      "description": "Run container as root user (not recommended for security reasons)."
     },
     {
       "name": "UMASK",
       "key": "UMASK",
       "value": "000",
-      "mask": false
+      "mask": false,
+      "description": "File creation mask for permission control."
     },
     {
       "name": "UID",
       "key": "UID",
       "value": "500",
-      "mask": false
+      "mask": false,
+      "description": "User ID for file permissions and ownership."
     },
     {
       "name": "GID",
       "key": "GID",
       "value": "500",
-      "mask": false
+      "mask": false,
+      "description": "Group ID for file permissions and ownership."
     }
   ],
   "devices": []
