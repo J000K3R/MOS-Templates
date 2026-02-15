@@ -1,6 +1,6 @@
 {
   "name": "seerr",
-  "repo": "ghcr.io/fallenbagel/jellyseerr:latest",
+  "repo": "ghcr.io/seerr-team/seerr:latest",
   "network": "bridge",
   "custom_ip": null,
   "default_shell": "sh",
@@ -12,7 +12,7 @@
   "category": [ "media" ],
   "project": "https://github.com/seerr-team/seerr",
   "support": "https://github.com/seerr-team/seerr/issues",
-  "description": "Jellyseerr is a free and open source software application for managing requests for your media library. It integrates with the media server of your choice: Jellyfin, Plex, and Emby. In addition, it integrates with your existing services, such as Sonarr, Radarr.",
+  "description": "Seerr is a free and open source software application for managing requests for your media library. It integrates with the media server of your choice: Jellyfin, Plex, and Emby. In addition, it integrates with your existing services, such as Sonarr, Radarr.",
   "donate": "https://opencollective.com/seerr",
   "paths": [
     {
@@ -50,14 +50,14 @@
     {
       "name": "PUID",
       "key": "PUID",
-      "value": "500",
+      "value": "1000",
       "mask": false,
       "description": "User ID for file permissions."
     },
     {
       "name": "PGID",
       "key": "PGID",
-      "value": "500",
+      "value": "1000",
       "mask": false,
       "description": "Group ID for file permissions."
     },
