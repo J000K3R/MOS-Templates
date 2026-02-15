@@ -51,14 +51,14 @@
       "key": "DATABASE_URL",
       "value": "postgres://tracearr:tracearr@postgres:5432/tracearr",
       "mask": false,
-      "description": "Postgres Database URL in following Format: postgres://tracearr:tracearr@postgres:5432/tracearr"
+      "description": "Postgres Database URL in following Format: postgres://DB_USER_NAME:DB_USER_PASSWORD@POSTGRES_HOST:5432/DB_Name"
     },
     {
       "name": "Redis URL",
       "key": "REDIS_URL",
       "value": "redis://redis:6379",
       "mask": false,
-      "description": "Redis URL in following Format: redis://redis:6379"
+      "description": "Redis URL in following Format: redis://REDIS_HOST:6379"
     },
     {
       "name": "JWT Secret",
