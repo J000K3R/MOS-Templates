@@ -1,0 +1,94 @@
+{
+  "name": "tracearr",
+  "repo": "ghcr.io/connorgallopo/tracearr:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:3000]/",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/tracearr.png",
+  "category": [ "media" ],
+  "project": "https://github.com/connorgallopo/tracearr",
+  "support": "https://github.com/connorgallopo/Tracearr/issues",
+  "description": "Tracearr is a monitoring platform for Plex, Jellyfin, and Emby. Track streams in real-time, dig into playback analytics, and spot account sharing before it gets out of hand.",
+  "donate": "https://github.com/sponsors/connorgallopo",
+  "paths": [],
+  "ports": [
+    {
+      "name": "WebUI",
+      "protocol": "",
+      "host": "3000",
+      "container": "3000",
+      "description": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "",
+      "key": "NODE_ENV",
+      "value": "production",
+      "mask": false,
+      "description": ""
+    },
+    {
+      "name": "",
+      "key": "HOST",
+      "value": "0.0.0.0",
+      "mask": false,
+      "description": ""
+    },
+    {
+      "name": "Timezone",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": ""
+    },
+    {
+      "name": "Postgres Database URL",
+      "key": "DATABASE_URL",
+      "value": "postgres://tracearr:tracearr@postgres:5432/tracearr",
+      "mask": false,
+      "description": "Postgres Database URL in following Format: postgres://tracearr:tracearr@postgres:5432/tracearr"
+    },
+    {
+      "name": "Redis URL",
+      "key": "REDIS_URL",
+      "value": "redis://redis:6379",
+      "mask": false,
+      "description": "Redis URL in following Format: redis://redis:6379"
+    },
+    {
+      "name": "JWT Secret",
+      "key": "JWT_SECRET",
+      "value": "JWT_SECRET",
+      "mask": true,
+      "description": "Generate in MOS CLI with \"openssl rand -hex 32\""
+    },
+    {
+      "name": "Cookie Secret",
+      "key": "COOKIE_SECRET",
+      "value": "COOKIE_SECRET",
+      "mask": true,
+      "description": "Generate in MOS CLI with \"openssl rand -hex 32\""
+    },
+    {
+      "name": "CORS_ORIGIN",
+      "key": "CORS_ORIGIN",
+      "value": "*",
+      "mask": false,
+      "description": "CORS origin (* for all origins, or specific domain like https://your-domain.com)"
+    },
+    {
+      "name": "Log Level",
+      "key": "LOG_LEVEL",
+      "value": "info",
+      "mask": false,
+      "description": ""
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
