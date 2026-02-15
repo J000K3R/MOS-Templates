@@ -1,9 +1,0 @@
-{
-  "name": "TESTING-NOT-USE-tracearr-supervised-compose",
-  "category": "media",
-  "description": "Tracearr is a free, open-source monitoring platform that gives you complete visibility into your media servers. Track streams in real-time, analyze playback patterns, and detect account sharing — all from a single interface.",
-  "website": "https://www.tracearr.com/",
-  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/tracearr.png",
-  "support": "https://github.com/connorgallopo/Tracearr/issues",
-  "web_ui_url": "http://[ADDRESS]:[PORT:3000]/"
-}
