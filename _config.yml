@@ -11,5 +11,8 @@ baseurl: ""
 search_enabled: true
 color_scheme: dark
 nav_sort: case_insensitive
+google_fonts:
+  - name: "Inter"
+    weights: "300;400;700"
 
 footer_content: "MOS Templates – maintained by J000K3R"
