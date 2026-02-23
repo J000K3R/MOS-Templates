@@ -8,7 +8,7 @@ nav_order: 2
 
 # 🔐 Authentik Server
 
-![Authentik](https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/authentik.png)
+<img src="https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/authentik.png" width="80" />
 
 **authentik** is an open-source Identity Provider (IdP) for modern SSO. It supports
 SAML, OAuth2/OIDC, LDAP, RADIUS, and more, designed for self-hosting from small labs
