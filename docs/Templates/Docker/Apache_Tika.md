@@ -8,7 +8,7 @@ nav_order: 1
 
 # 🪶 Apache Tika
 
-![Apache Tika](https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/apache.png){: width="64" }
+<img src="https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/apache.png" width="80" />
 
 **Apache Tika™** is a toolkit for detecting and extracting metadata and structured
 text content from various documents using existing parser libraries.
