@@ -7,6 +7,7 @@ plugins:
 
 url: "https://mos-templates.evil-corp.at"
 baseurl: ""
+logo: "/icons/logo.png"
 
 search_enabled: true
 color_scheme: dark
