@@ -1,6 +1,9 @@
 title: J000K3Rs MOS Templates
 description: Templates for the MOS Hub – a collection of templates that are directly discoverable inside the MOS Hub.
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
+
+plugins:
+  - jekyll-remote-theme
 
 url: "https://mos-templates.evil-corp.at"
 baseurl: ""
