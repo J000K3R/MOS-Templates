@@ -1,17 +1,52 @@
-:root {
-  --body-background-color: #1a1a1a;
-  --sidebar-color: #111111;
-  --code-background-color: #222222;
+// Hintergrund Body
+body {
+  background-color: #1a1a1a !important;
+}
 
-  --body-text-color: #e0e0e0;
-  --nav-child-link-color: #b0b0b0;
+// Sidebar
+.side-bar {
+  background-color: #111111 !important;
+  border-right: 1px solid #2a2a2a !important;
+}
 
-  --link-color: #3d9df2;
+// Navigation Links
+.nav-list .nav-list-item .nav-list-link {
+  color: #b0b0b0 !important;
+  &:hover {
+    color: #ffffff !important;
+  }
+  &.active {
+    color: #2ecc71 !important;
+  }
+}
 
-  --nav-heading-color: #2ecc71;
+// Navigation Kategorien
+.nav-list .nav-list-item > .nav-list-expander,
+.side-bar .site-title {
+  color: #2ecc71 !important;
+}
 
-  --border-color: #2a2a2a;
-  --table-border-color: #2a2a2a;
+// Links
+a {
+  color: #3d9df2 !important;
+}
 
-  --code-text-color: #2ecc71;
+// Main Content Bereich
+.main-content {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+}
+
+// Code Blocks
+code, pre {
+  background-color: #222222 !important;
+  color: #2ecc71 !important;
+}
+
+// Tabellen
+table {
+  border-color: #2a2a2a !important;
+}
+td, th {
+  border-color: #2a2a2a !important;
 }
