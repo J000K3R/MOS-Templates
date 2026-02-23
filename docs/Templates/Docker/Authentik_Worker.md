@@ -8,7 +8,7 @@ nav_order: 3
 
 # ⚙️ Authentik Worker
 
-![Authentik](https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/authentik.png)
+<img src="https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/authentik.png" width="80" />
 
 **authentik Worker** is the background task processor for authentik. It handles
 certificate management, backups, outpost deployments, and all asynchronous tasks
