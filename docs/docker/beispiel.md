@@ -1,6 +1,7 @@
 ---
 title: Beispiel Container
 parent: Docker Templates
+layout: default
 nav_order: 1
 ---
 
