@@ -5,7 +5,7 @@ remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-remote-theme
 
-url: "https://mos-templates.evil-corp.at"
+url: "https://j000k3r.github.io/MOS-Templates/"
 baseurl: ""
 logo: "/icons/logo.png"
 
