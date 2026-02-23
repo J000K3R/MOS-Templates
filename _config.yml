@@ -1,0 +1,12 @@
+title: J000K3Rs MOS Templates
+description: Templates for the MOS Hub – a collection of templates that are directly discoverable inside the MOS Hub.
+theme: just-the-docs
+
+url: "https://mos-templates.evil-corp.at"
+baseurl: ""
+
+search_enabled: true
+color_scheme: dark
+nav_sort: case_insensitive
+
+footer_content: "MOS Templates – maintained by J000K3R"
