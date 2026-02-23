@@ -1,6 +1,6 @@
 {
   "name": "authentik-worker",
-  "repo": "ghcr.io/goauthentik/server:2025.10.2",
+  "repo": "ghcr.io/goauthentik/server:2025.12.4",
   "network": "bridge",
   "custom_ip": null,
   "default_shell": "bash",
