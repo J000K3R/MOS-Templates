@@ -18,9 +18,9 @@ Each template can be installed directly from the MOS Hub with a single click.
 
 | Template | Description | Guide |
 |---|---|---|
-| 🪶 **Apache Tika** | Document metadata & text extraction toolkit | [📖 Guide](Apache_Tika) |
-| 🔐 **Authentik Server** | Open-source Identity Provider with SSO support | [📖 Guide](Authentik_Server) |
-| ⚙️ **Authentik Worker** | Background task processor for Authentik | [📖 Guide](Authentik_Worker) |
+| 🪶 **Apache Tika** | Document metadata & text extraction toolkit | [📖 Guide](Apache_Tika.html) |
+| 🔐 **Authentik Server** | Open-source Identity Provider with SSO support | [📖 Guide](Authentik_Server.html) |
+| ⚙️ **Authentik Worker** | Background task processor for Authentik | [📖 Guide](Authentik_Worker.html) |
 
 ---
 
