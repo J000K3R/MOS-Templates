@@ -1,5 +1,5 @@
 {
-  "name": "Beszel",
+  "name": "Beszel-Hub",
   "repo": "henrygd/beszel:latest",
   "network": "bridge",
   "custom_ip": null,
