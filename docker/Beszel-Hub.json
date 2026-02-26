@@ -12,7 +12,7 @@
   "category": ["monitoring"],
   "project": "https://github.com/henrygd/beszel",
   "support": "https://github.com/henrygd/beszel/issues",
-  "description": "Beszel is a simple, lightweight server monitoring hub with a clean web UI. It supports real-time metrics for CPU, memory, disk, and network usage across all your systems, including Docker container monitoring.",
+  "description": "Instruction: https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Beszel-Hub.html Beszel is a simple, lightweight server monitoring hub with a clean web UI. It supports real-time metrics for CPU, memory, disk, and network usage across all your systems, including Docker container monitoring.",
   "donate": "https://www.buymeacoffee.com/henrygd",
   "paths": [
     {
