@@ -1,0 +1,56 @@
+{
+  "name": "Open-Webui",
+  "repo": "ghcr.io/open-webui/open-webui:main",
+  "network": "bridge",
+  "custom_ip": "",
+  "default_shell": "bash",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:3000]/",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/open-webui.png",
+  "paths": [
+    {
+      "name": "Data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/open-webui",
+      "container": "/app/backend/data",
+      "description": ""
+    }
+  ],
+  "ports": [
+    {
+      "name": "WebUI",
+      "protocol": "tcp",
+      "host": "3000",
+      "container": "8080",
+      "description": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "ENABLE_SIGNUP",
+      "key": "ENABLE_SIGNUP",
+      "value": "false",
+      "mask": false,
+      "description": ""
+    },
+    {
+      "name": "ENABLE_MEMORIES",
+      "key": "ENABLE_MEMORIES",
+      "value": "true",
+      "mask": false,
+      "description": ""
+    },
+    {
+      "name": "WEBUI_SECRET_KEY",
+      "key": "WEBUI_SECRET_KEY",
+      "value": "GENERATE WITH: openssl rand -hex 32",",
+      "mask": true
+      "description": "JWT secret key for session management. Generate with: openssl rand -hex 32"
+    }
+  ],
+  "devices": [],
+  "labels": [],
+  "gpus": []
+}
