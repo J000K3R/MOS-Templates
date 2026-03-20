@@ -15,7 +15,7 @@
       "mode": "rw",
       "host": "/mnt/cache/appdata/open-webui",
       "container": "/app/backend/data",
-      "description": ""
+      "description": "Appdata Folder"
     }
   ],
   "ports": [
@@ -33,14 +33,14 @@
       "key": "ENABLE_SIGNUP",
       "value": "false",
       "mask": false,
-      "description": ""
+      "description": "Enable Signup"
     },
     {
       "name": "ENABLE_MEMORIES",
       "key": "ENABLE_MEMORIES",
       "value": "true",
       "mask": false,
-      "description": ""
+      "description": "Enable Memories"
     },
     {
       "name": "WEBUI_SECRET_KEY",
