@@ -8,6 +8,7 @@
   "extra_parameters": "--restart unless-stopped",
   "post_parameters": "tunnel run XXXXX",
   "web_ui_url": null,
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Cloudflared.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/cloudflare.png",
   "category": [ "web" ],
   "project": "https://github.com/cloudflare/cloudflared",

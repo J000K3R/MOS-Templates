@@ -8,6 +8,7 @@
   "extra_parameters": "--restart=unless-stopped",
   "post_parameters": "server",
   "web_ui_url": "http://[IP]:[PORT:9000]",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Authentik_Server.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/authentik.png",
   "category": [ "web" ],
   "project": "https://github.com/goauthentik/authentik",

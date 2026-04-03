@@ -8,6 +8,7 @@
   "extra_parameters": "--restart=unless-stopped",
   "post_parameters": null,
   "web_ui_url": "http://[IP]:[PORT:80]",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Element_Web.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/element.png",
   "category": [ "cloud", "productivity", "network" ],
   "project": "https://github.com/element-hq/element-web",

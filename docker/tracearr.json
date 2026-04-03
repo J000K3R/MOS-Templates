@@ -8,6 +8,7 @@
   "extra_parameters": "--restart=unless-stopped",
   "post_parameters": null,
   "web_ui_url": "http://[IP]:[PORT:3000]/",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Tracearr.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/tracearr.png",
   "category": [ "media" ],
   "project": "https://github.com/connorgallopo/tracearr",

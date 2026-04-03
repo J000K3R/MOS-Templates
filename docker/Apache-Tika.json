@@ -8,6 +8,7 @@
   "extra_parameters": "--restart=unless-stopped",
   "post_parameters": null,
   "web_ui_url": null,
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Apache_Tika.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/apache.png",
   "category": [ "productivity" ],
   "project": "https://github.com/apache/tika",

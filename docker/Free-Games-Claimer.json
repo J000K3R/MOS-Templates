@@ -8,6 +8,7 @@
   "extra_parameters": null,
   "post_parameters": null,
   "web_ui_url": "http://[IP]:[PORT:6080]",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Free_Games_Claimer.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/free-games-claimer.png",
   "category": [ "games" ],
   "project": "https://github.com/vogler/free-games-claimer",

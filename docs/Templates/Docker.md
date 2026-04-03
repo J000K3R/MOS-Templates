@@ -34,6 +34,7 @@ Each template can be installed directly from the MOS Hub with a single click.
 | 🗂️ **Krusader** | Twin-panel file manager in the browser | [📖 Guide](Docker/Krusader.html) |
 | ⛏️ **Minecraft Server** | Self-hosted Minecraft server (Vanilla, Paper, Forge & more) | [📖 Guide](Docker/Minecraft_Server.html) |
 | ☁️ **Nextcloud** | Self-hosted cloud storage & collaboration platform | [📖 Guide](Docker/Nextcloud.html) |
+| 📡 **Prowlarr** | Indexer manager for Sonarr/Radarr/Lidarr | [📖 Guide](Docker/Prowlarr.html) |
 | 🎬 **Seerr** | Media request manager for Jellyfin, Plex & Emby | [📖 Guide](Docker/Seerr.html) |
 | 📊 **Tracearr** | Stream monitoring & analytics for media servers | [📖 Guide](Docker/Tracearr.html) |
 | 🎞️ **Unmanic** | Automated media file optimisation & conversion | [📖 Guide](Docker/Unmanic.html) |
