@@ -1,0 +1,110 @@
+{
+  "name": "InfluxDB",
+  "repo": "influxdb:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "bash",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:8086]/",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/InfluxDB.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/influxdb.png",
+  "category": [ "database" ],
+  "project": "https://github.com/influxdata/influxdb",
+  "support": "https://github.com/influxdata/influxdb/issues",
+  "description": "InfluxDB is an open-source time series database designed to handle high write and query loads. It is the perfect choice for storing metrics, events, and real-time analytics data from your applications and infrastructure.",
+  "donate": "https://www.influxdata.com/",
+  "paths": [
+    {
+      "name": "Data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/influxdb",
+      "container": "/var/lib/influxdb2",
+      "description": "Persistent storage for InfluxDB data, configuration, and WAL files."
+    }
+  ],
+  "ports": [
+    {
+      "name": "HTTP API",
+      "protocol": "tcp",
+      "host": "8086",
+      "container": "8086",
+      "description": "InfluxDB HTTP API and Web Interface port."
+    }
+  ],
+  "variables": [
+    {
+      "name": "Docker InfluxDB Init Mode",
+      "key": "DOCKER_INFLUXDB_INIT_MODE",
+      "value": "setup",
+      "mask": false,
+      "description": "Initialization mode. Use 'setup' for first-time setup or 'upgrade' for upgrading existing database."
+    },
+    {
+      "name": "Admin Username",
+      "key": "DOCKER_INFLUXDB_INIT_USERNAME",
+      "value": "admin",
+      "mask": false,
+      "description": "Username for the InfluxDB admin account."
+    },
+    {
+      "name": "Admin Password",
+      "key": "DOCKER_INFLUXDB_INIT_PASSWORD",
+      "value": "",
+      "mask": true,
+      "description": "Password for the InfluxDB admin account (min 8 characters, must be set before first start)."
+    },
+    {
+      "name": "Admin Token",
+      "key": "DOCKER_INFLUXDB_INIT_ADMIN_TOKEN",
+      "value": "",
+      "mask": true,
+      "description": "API token for admin operations. Generate a secure random token or leave empty to auto-generate."
+    },
+    {
+      "name": "Organization Name",
+      "key": "DOCKER_INFLUXDB_INIT_ORG",
+      "value": "mos",
+      "mask": false,
+      "description": "Default organization name for InfluxDB."
+    },
+    {
+      "name": "Bucket Name",
+      "key": "DOCKER_INFLUXDB_INIT_BUCKET",
+      "value": "data",
+      "mask": false,
+      "description": "Default bucket name for storing time-series data."
+    },
+    {
+      "name": "Retention",
+      "key": "DOCKER_INFLUXDB_INIT_RETENTION",
+      "value": "0",
+      "mask": false,
+      "description": "Default retention period in hours (0 = infinite retention)."
+    },
+    {
+      "name": "PUID",
+      "key": "PUID",
+      "value": "500",
+      "mask": false,
+      "description": "User ID for file permissions."
+    },
+    {
+      "name": "PGID",
+      "key": "PGID",
+      "value": "500",
+      "mask": false,
+      "description": "Group ID for file permissions."
+    },
+    {
+      "name": "Timezone",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Timezone for the container."
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
