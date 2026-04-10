@@ -1,0 +1,66 @@
+{
+  "name": "timescaledb",
+  "repo": "timescale/timescaledb:latest-pg15",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "bash",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": "",
+  "web_ui_url": "",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/TimescaleDB.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/tigerdata.png",
+  "category": [ "database" ],
+  "project": "https://github.com/timescale/timescaledb",
+  "support": "https://github.com/timescale/timescaledb/issues",
+  "description": "TimescaleDB is a PostgreSQL extension optimized for time-series data. This container runs a full PostgreSQL 15 instance with TimescaleDB pre-installed, intended for use with Tracearr.",
+  "donate": "",
+  "paths": [
+    {
+      "name": "Data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/timescaledb/data",
+      "container": "/var/lib/postgresql/data"
+    }
+  ],
+  "ports": [
+    {
+      "name": "PostgreSQL",
+      "protocol": "tcp",
+      "host": "5432",
+      "container": "5432"
+    }
+  ],
+  "variables": [
+    {
+      "name": "Postgres User",
+      "key": "POSTGRES_USER",
+      "value": "tracearr",
+      "mask": false,
+      "description": "Database user that will be created on first startup."
+    },
+    {
+      "name": "Postgres Password",
+      "key": "POSTGRES_PASSWORD",
+      "value": "",
+      "mask": true,
+      "description": "Secure password for the database user. Must be set before starting the container."
+    },
+    {
+      "name": "Postgres DB",
+      "key": "POSTGRES_DB",
+      "value": "tracearr",
+      "mask": false,
+      "description": "Name of the database that will be automatically created on first startup."
+    },
+    {
+      "name": "Timezone",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Timezone of the container, e.g. Europe/Vienna or Europe/Berlin."
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}

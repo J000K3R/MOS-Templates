@@ -57,7 +57,7 @@ No volumes required for this container.
 
 | Variable | Default | Masked | Description |
 |---|---|---|---|
-| `DATABASE_URL` | `postgres://tracearr:tracearr@postgres:5432/tracearr` | ❌ | PostgreSQL connection URL |
+| `DATABASE_URL` | `postgres://tracearr:tracearr@timescaledb:5432/tracearr` | ❌ | PostgreSQL connection URL — point this to your **TimescaleDB** container |
 | `REDIS_URL` | `redis://redis:6379` | ❌ | Redis connection URL |
 
 ### 🌍 General
@@ -84,31 +84,34 @@ openssl rand -hex 32
 
 ## 🚀 Quick Start
 
-1. Make sure **PostgreSQL** and **Redis** are running first (required!)
-2. Generate your `JWT_SECRET` and `COOKIE_SECRET`
-3. Open the **MOS Hub** and search for **Tracearr**
-4. Fill in `DATABASE_URL` with your PostgreSQL connection details
-5. Fill in `REDIS_URL` with your Redis connection details
-6. Paste both generated secrets
-7. Click **Install**
-8. Access Tracearr at `http://your-server-ip:3000`
+1. Install and start **[TimescaleDB](./TimescaleDB.html)** first — Tracearr requires it for quality tracking features
+2. Make sure **Redis** is running as well
+3. Generate your `JWT_SECRET` and `COOKIE_SECRET`
+4. Open the **MOS Hub** and search for **Tracearr**
+5. Fill in `DATABASE_URL` pointing to your TimescaleDB instance
+6. Fill in `REDIS_URL` with your Redis connection details
+7. Paste both generated secrets
+8. Click **Install**
+9. Access Tracearr at `http://your-server-ip:3000`
 
 ---
 
 ## 🔗 DATABASE_URL Format
 ```
-postgres://DB_USER:DB_PASSWORD@POSTGRES_HOST:5432/DB_NAME
+postgres://DB_USER:DB_PASSWORD@TIMESCALEDB_HOST:5433/DB_NAME
 ```
 
 Example:
 ```
-postgres://tracearr:mysecretpassword@postgres:5432/tracearr
+postgres://tracearr:mysecretpassword@192.168.11.253:5433/tracearr
 ```
 
 ---
 
-> ⚠️ **Note:** Tracearr requires a running **PostgreSQL** and **Redis** instance.
-> Make sure both are up and accessible before starting Tracearr!
+> ⚠️ **Note:** Tracearr requires a running **TimescaleDB** and **Redis** instance.
+> Using a plain PostgreSQL instance is possible but will cause errors on the
+> **Quality** page — specifically the `library_stats_daily` continuous aggregate
+> will not work without the TimescaleDB extension.
 
 > 💡 **Tip:** Set `CORS_ORIGIN` to your specific domain instead of `*` in
 > production for better security — e.g. `https://tracearr.yourdomain.com`
