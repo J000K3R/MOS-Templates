@@ -1,5 +1,5 @@
 {
-  "name": "prowlarr",
+  "name": "Prowlarr",
   "repo": "lscr.io/linuxserver/prowlarr:latest",
   "network": "bridge",
   "custom_ip": null,

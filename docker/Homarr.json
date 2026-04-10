@@ -1,5 +1,5 @@
 {
-  "name": "homarr",
+  "name": "Homarr",
   "repo": "ghcr.io/homarr-labs/homarr:latest",
   "network": "bridge",
   "custom_ip": null,

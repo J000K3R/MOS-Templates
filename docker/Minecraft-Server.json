@@ -1,5 +1,5 @@
 {
-  "name": "minecraft-server",
+  "name": "Minecraft-Server",
   "repo": "itzg/minecraft-server:latest",
   "network": "bridge",
   "custom_ip": null,

@@ -1,5 +1,5 @@
 {
-  "name": "bookstack",
+  "name": "Bookstack",
   "repo": "lscr.io/linuxserver/bookstack:latest",
   "network": "bridge",
   "custom_ip": null,

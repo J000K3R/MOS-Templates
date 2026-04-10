@@ -1,5 +1,5 @@
 {
-  "name": "ollama",
+  "name": "Ollama",
   "repo": "ollama/ollama:latest",
   "network": "bridge",
   "custom_ip": null,

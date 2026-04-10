@@ -1,5 +1,5 @@
 {
-  "name": "bazarr",
+  "name": "Bazarr",
   "repo": "lscr.io/linuxserver/bazarr:latest",
   "network": "bridge",
   "custom_ip": null,

@@ -1,5 +1,5 @@
 {
-  "name": "seerr",
+  "name": "Seerr",
   "repo": "ghcr.io/seerr-team/seerr:latest",
   "network": "bridge",
   "custom_ip": null,

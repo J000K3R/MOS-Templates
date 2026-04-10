@@ -1,5 +1,5 @@
 {
-  "name": "cloudflared",
+  "name": "Cloudflared",
   "repo": "cloudflare/cloudflared:latest",
   "network": "bridge",
   "custom_ip": null,

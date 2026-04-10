@@ -1,5 +1,5 @@
 {
-  "name": "lidarr",
+  "name": "Lidarr",
   "repo": "lscr.io/linuxserver/lidarr:latest",
   "network": "bridge",
   "custom_ip": null,

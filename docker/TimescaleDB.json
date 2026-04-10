@@ -1,5 +1,5 @@
 {
-  "name": "timescaledb",
+  "name": "Timescaledb",
   "repo": "timescale/timescaledb:latest-pg15",
   "network": "bridge",
   "custom_ip": null,

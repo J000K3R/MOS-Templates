@@ -1,5 +1,5 @@
 {
-  "name": "code-server",
+  "name": "Code-Server",
   "repo": "lscr.io/linuxserver/code-server",
   "network": "bridge",
   "custom_ip": null,

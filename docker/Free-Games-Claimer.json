@@ -1,5 +1,5 @@
 {
-  "name": "free-games-claimer",
+  "name": "Free-Games-Claimer",
   "repo": "ghcr.io/vogler/free-games-claimer",
   "network": "bridge",
   "custom_ip": null,

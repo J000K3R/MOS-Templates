@@ -1,5 +1,5 @@
 {
-  "name": "tracearr",
+  "name": "Tracearr",
   "repo": "ghcr.io/connorgallopo/tracearr:latest",
   "network": "bridge",
   "custom_ip": null,

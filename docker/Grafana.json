@@ -1,5 +1,5 @@
 {
-  "name": "grafana",
+  "name": "Grafana",
   "repo": "grafana/grafana:latest",
   "network": "bridge",
   "custom_ip": null,
