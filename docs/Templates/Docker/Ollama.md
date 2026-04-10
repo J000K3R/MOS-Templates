@@ -74,7 +74,7 @@ applications like Open WebUI, LibreChat, or any other OpenAI-compatible client.
 
 1. Open the **MOS Hub** and search for **Ollama**
 2. Adjust the `OLLAMA_ORIGINS` variable if you need CORS access from specific domains
-3. For GPU support, ensure your host has NVIDIA Docker runtime configured
+3. For GPU support, ensure your host has NVIDIA Driver Plugin installed via MOS Hub
 4. Click **Install**
 5. Pull your first model:
 
@@ -134,3 +134,6 @@ Use this URL in applications that expect an OpenAI API endpoint. No API key requ
 
 > 💡 **Tip:** For multiple concurrent users, increase `OLLAMA_NUM_PARALLEL` and
 > `OLLAMA_MAX_LOADED_MODELS` accordingly.
+
+> 📚 **For more information:** Visit the official [Ollama documentation](https://ollama.com)
+> for details on all available models, API endpoints, and advanced configuration options.
