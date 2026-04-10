@@ -57,7 +57,7 @@ No volumes required for this container.
 
 | Variable | Default | Masked | Description |
 |---|---|---|---|
-| `DATABASE_URL` | `postgres://tracearr:tracearr@timescaledb:5432/tracearr` | ❌ | PostgreSQL connection URL — point this to your **TimescaleDB** container |
+| `DATABASE_URL` | `postgres://tracearr:tracearr@timescaledb:5433/tracearr` | ❌ | PostgreSQL connection URL — point this to your **TimescaleDB** container |
 | `REDIS_URL` | `redis://redis:6379` | ❌ | Redis connection URL |
 
 ### 🌍 General
@@ -98,17 +98,17 @@ openssl rand -hex 32
 
 ## 🔗 DATABASE_URL Format
 ```
-postgres://DB_USER:DB_PASSWORD@TIMESCALEDB_HOST:5433/DB_NAME
+postgres://DB_USER:DB_PASSWORD@TIMESCALEDB_HOST:5432/DB_NAME
 ```
 
 Example:
 ```
-postgres://tracearr:mysecretpassword@192.168.11.253:5433/tracearr
+postgres://tracearr:mysecretpassword@192.168.11.253:5432/tracearr
 ```
 
 ---
 
-> ⚠️ **Note:** Tracearr requires a running **TimescaleDB** and **Redis** instance.
+> ⚠️ **Note:** Tracearr requires a running **[TimescaleDB](https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/TimescaleDB.html)** and **Redis** instance.
 > Using a plain PostgreSQL instance is possible but will cause errors on the
 > **Quality** page — specifically the `library_stats_daily` continuous aggregate
 > will not work without the TimescaleDB extension.
