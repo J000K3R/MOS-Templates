@@ -1,0 +1,89 @@
+{
+  "name": "Authelia",
+  "repo": "authelia/authelia:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:9091]/",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Authelia.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/authelia.png",
+  "category": [ "security" ],
+  "project": "https://github.com/authelia/authelia",
+  "support": "https://github.com/authelia/authelia/issues",
+  "description": "Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion for reverse proxies to protect your applications.",
+  "donate": "https://github.com/sponsors/authelia",
+  "paths": [
+    {
+      "name": "Config",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/authelia/config",
+      "container": "/config",
+      "description": "Authelia configuration files (configuration.yml)."
+    },
+    {
+      "name": "Data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/authelia/data",
+      "container": "/data",
+      "description": "Persistent data storage for users, sessions, and TOTP secrets."
+    }
+  ],
+  "ports": [
+    {
+      "name": "WebUI",
+      "protocol": "tcp",
+      "host": "9091",
+      "container": "9091",
+      "description": "Authelia web portal and API port."
+    }
+  ],
+  "variables": [
+    {
+      "name": "PUID",
+      "key": "PUID",
+      "value": "500",
+      "mask": false,
+      "description": "User ID for file permissions."
+    },
+    {
+      "name": "PGID",
+      "key": "PGID",
+      "value": "500",
+      "mask": false,
+      "description": "Group ID for file permissions."
+    },
+    {
+      "name": "TZ",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Timezone for the container."
+    },
+    {
+      "name": "Authelia JWT Secret",
+      "key": "AUTHELIA_JWT_SECRET",
+      "value": "",
+      "mask": true,
+      "description": "Secret key for JWT token generation. Generate with: openssl rand -hex 32"
+    },
+    {
+      "name": "Session Secret",
+      "key": "AUTHELIA_SESSION_SECRET",
+      "value": "",
+      "mask": true,
+      "description": "Secret key for session encryption. Generate with: openssl rand -hex 32"
+    },
+    {
+      "name": "Storage Encryption Key",
+      "key": "AUTHELIA_STORAGE_ENCRYPTION_KEY",
+      "value": "",
+      "mask": true,
+      "description": "Encryption key for storage. Generate with: openssl rand -hex 32"
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
