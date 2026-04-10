@@ -1,0 +1,89 @@
+{
+  "name": "Audiobookshelf",
+  "repo": "ghcr.io/advplyr/audiobookshelf:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:13378]/",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Audiobookshelf.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/audiobookshelf.png",
+  "category": [ "media" ],
+  "project": "https://github.com/advplyr/audiobookshelf",
+  "support": "https://github.com/advplyr/audiobookshelf/issues",
+  "description": "Audiobookshelf is a self-hosted audiobook and podcast server with an elegant web player and mobile apps. Features include multi-user support, progress syncing, offline listening, and automatic metadata fetching.",
+  "donate": "https://github.com/sponsors/advplyr",
+  "paths": [
+    {
+      "name": "Audiobooks",
+      "mode": "ro",
+      "host": "/mnt/cache/media/audiobooks",
+      "container": "/audiobooks",
+      "description": "Your audiobook library folder."
+    },
+    {
+      "name": "Podcasts",
+      "mode": "ro",
+      "host": "/mnt/cache/media/podcasts",
+      "container": "/podcasts",
+      "description": "Your podcast library folder."
+    },
+    {
+      "name": "Config",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/audiobookshelf/config",
+      "container": "/config",
+      "description": "Audiobookshelf configuration and database."
+    },
+    {
+      "name": "Metadata",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/audiobookshelf/metadata",
+      "container": "/metadata",
+      "description": "Cached metadata, cover images, and audio file data."
+    }
+  ],
+  "ports": [
+    {
+      "name": "WebUI",
+      "protocol": "tcp",
+      "host": "13378",
+      "container": "80",
+      "description": "Audiobookshelf Web Interface port."
+    }
+  ],
+  "variables": [
+    {
+      "name": "PUID",
+      "key": "PUID",
+      "value": "500",
+      "mask": false,
+      "description": "User ID for file permissions."
+    },
+    {
+      "name": "PGID",
+      "key": "PGID",
+      "value": "500",
+      "mask": false,
+      "description": "Group ID for file permissions."
+    },
+    {
+      "name": "TZ",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Timezone for the container."
+    },
+    {
+      "name": "Debug Mode",
+      "key": "DEBUG",
+      "value": "false",
+      "mask": false,
+      "description": "Enable debug logging (set to true for troubleshooting)."
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
