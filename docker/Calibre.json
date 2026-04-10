@@ -1,0 +1,96 @@
+{
+  "name": "Calibre",
+  "repo": "lscr.io/linuxserver/calibre:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "bash",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:8080]/",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Calibre.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/calibre.png",
+  "category": [ "media" ],
+  "project": "https://calibre-ebook.com/",
+  "support": "https://github.com/linuxserver/docker-calibre/issues",
+  "description": "Calibre is a powerful and easy to use e-book manager. Users say it's outstanding and a must-have. It'll allow you to do nearly everything and it takes things a step beyond normal e-book software. Includes desktop GUI accessible via web browser.",
+  "donate": "https://calibre-ebook.com/donate",
+  "paths": [
+    {
+      "name": "Config",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/calibre",
+      "container": "/config",
+      "description": "Calibre configuration, database, and settings."
+    },
+    {
+      "name": "Library",
+      "mode": "rw",
+      "host": "/mnt/cache/media/books",
+      "container": "/books",
+      "description": "Your eBook library storage location."
+    },
+    {
+      "name": "Import",
+      "mode": "rw",
+      "host": "/mnt/cache/media/books-import",
+      "container": "/import",
+      "description": "Optional folder for importing new eBooks into Calibre."
+    }
+  ],
+  "ports": [
+    {
+      "name": "WebUI",
+      "protocol": "tcp",
+      "host": "8080",
+      "container": "8080",
+      "description": "Calibre desktop GUI via web interface (noVNC)."
+    },
+    {
+      "name": "Calibre Server",
+      "protocol": "tcp",
+      "host": "8081",
+      "container": "8081",
+      "description": "Calibre content server for eBook access."
+    }
+  ],
+  "variables": [
+    {
+      "name": "PUID",
+      "key": "PUID",
+      "value": "500",
+      "mask": false,
+      "description": "User ID for file permissions."
+    },
+    {
+      "name": "PGID",
+      "key": "PGID",
+      "value": "500",
+      "mask": false,
+      "description": "Group ID for file permissions."
+    },
+    {
+      "name": "TZ",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Timezone for the container."
+    },
+    {
+      "name": "GUI Password",
+      "key": "PASSWORD",
+      "value": "",
+      "mask": true,
+      "description": "Optional password for the GUI (if empty, no password required)."
+    },
+    {
+      "name": "CLI Args",
+      "key": "CLI_ARGS",
+      "value": "",
+      "mask": false,
+      "description": "Optional arguments to pass to Calibre on startup."
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}

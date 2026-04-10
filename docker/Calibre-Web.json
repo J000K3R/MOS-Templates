@@ -1,0 +1,75 @@
+{
+  "name": "Calibre-Web",
+  "repo": "lscr.io/linuxserver/calibre-web:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "bash",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:8083]/",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Calibre-Web.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/calibre-web.png",
+  "category": [ "media" ],
+  "project": "https://github.com/janeczku/calibre-web",
+  "support": "https://github.com/janeczku/calibre-web/issues",
+  "description": "Calibre-Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database. It requires a Calibre library but provides a much better web experience than Calibre's built-in server.",
+  "donate": "https://github.com/janeczku/calibre-web",
+  "paths": [
+    {
+      "name": "Config",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/calibre-web",
+      "container": "/config",
+      "description": "Calibre-Web configuration and database."
+    },
+    {
+      "name": "Books",
+      "mode": "ro",
+      "host": "/mnt/cache/media/books",
+      "container": "/books",
+      "description": "Calibre library folder (must contain metadata.db)."
+    }
+  ],
+  "ports": [
+    {
+      "name": "WebUI",
+      "protocol": "tcp",
+      "host": "8083",
+      "container": "8083",
+      "description": "Calibre-Web interface port."
+    }
+  ],
+  "variables": [
+    {
+      "name": "PUID",
+      "key": "PUID",
+      "value": "500",
+      "mask": false,
+      "description": "User ID for file permissions."
+    },
+    {
+      "name": "PGID",
+      "key": "PGID",
+      "value": "500",
+      "mask": false,
+      "description": "Group ID for file permissions."
+    },
+    {
+      "name": "TZ",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Timezone for the container."
+    },
+    {
+      "name": "Docker Mods",
+      "key": "DOCKER_MODS",
+      "value": "",
+      "mask": false,
+      "description": "Optional: Enable Calibre ebook-convert tool with 'linuxserver/mods:universal-calibre'."
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
