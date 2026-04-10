@@ -97,16 +97,8 @@ curl http://YOUR_HOST_IP:11434/api/generate -d '{
 
 For NVIDIA GPU acceleration, ensure you have:
 
-1. **NVIDIA Driver** installed on your host
-2. **NVIDIA Container Toolkit** installed:
-   ```bash
-   # Ubuntu/Debian
-   sudo apt install nvidia-container-toolkit
-   sudo nvidia-ctk runtime configure --runtime=docker
-   sudo systemctl restart docker
-   ```
-
-3. The container will automatically use available GPUs when properly configured.
+1. **NVIDIA Driver** installed on your host via MOS Hub Plugin
+2. The container will automatically use available GPUs when properly configured.
 
 ---
 
