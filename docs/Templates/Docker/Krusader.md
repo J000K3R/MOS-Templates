@@ -83,3 +83,6 @@ your browser via a web interface.
 
 > 💡 **Tip:** The `/mnt/cache` volume gives Krusader direct access to your MOS
 > filesystem, so you can manage all your server files directly from the browser.
+
+> 📚 **For more information:** Visit the [Krusader website](https://krusader.org/)
+> for advanced file management features and keyboard shortcuts.

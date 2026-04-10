@@ -66,3 +66,6 @@ No environment variables required for this container.
 
 > 💡 **Tip:** Dozzle supports **multi-host monitoring** — you can connect multiple
 > Docker hosts and monitor all their logs from a single Dozzle instance.
+
+> 📚 **For more information:** Visit the [Dozzle documentation](https://dozzle.dev/)
+> for additional features like filtering, custom views, and authentication options.

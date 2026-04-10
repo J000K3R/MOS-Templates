@@ -84,3 +84,6 @@ Unmanic has a rich plugin library — here are some popular ones:
 
 > ⚠️ **Note:** Make sure your `/mnt/cache/temp` directory has enough free space —
 > Unmanic needs room to store files during conversion before moving them to the library.
+
+> 📚 **For more information:** Visit the [Unmanic documentation](https://docs.unmanic.app/)
+> for plugin development, library optimization, and automation workflows.

@@ -99,3 +99,6 @@ openssl rand -hex 32
 
 > ⚠️ **Note:** Set `OPEN_REGISTRATION` to `false` after creating your account to
 > prevent unauthorized users from signing up!
+
+> 📚 **For more information:** Visit the [KitchenOwl documentation](https://kitchenowl.org/)
+> for API documentation, mobile app setup, and advanced features.

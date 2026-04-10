@@ -95,3 +95,6 @@ Uptime Kuma supports 90+ notification providers including:
 
 > ⚠️ **Note:** Uptime Kuma v2 has a new database format — do not downgrade to v1
 > after upgrading, as this may cause data loss!
+
+> 📚 **For more information:** Visit the [Uptime Kuma documentation](https://github.com/louislam/uptime-kuma/wiki)
+> for additional monitor types, notification providers, and status page customization.

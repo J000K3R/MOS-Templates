@@ -97,3 +97,6 @@ postgres://tracearr:mysecretpassword@192.168.11.253:5433/tracearr
 > 💡 **Tip:** After migrating Tracearr to this container, drop any manually created
 > `library_stats_daily` table and restart Tracearr — it will recreate it correctly
 > as a TimescaleDB continuous aggregate.
+
+> 📚 **For more information:** Visit the [TimescaleDB documentation](https://docs.timescale.com/)
+> for advanced time-series features, continuous aggregates, and hypertable optimization.

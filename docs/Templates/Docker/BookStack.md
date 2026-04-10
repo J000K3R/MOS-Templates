@@ -98,3 +98,6 @@ Copy the output and paste it as the value for `APP_KEY`.
 > Make sure the database is up and the credentials match before starting BookStack.
 
 > 💡 **Tip:** Change the default admin password immediately after your first login!
+
+> 📚 **For more information:** Visit the [BookStack documentation](https://www.bookstackapp.com/docs/)
+> for detailed setup guides, user management, and customization options.

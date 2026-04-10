@@ -88,3 +88,6 @@ After setup, install these apps from the Nextcloud App Store for the best experi
 
 > ⚠️ **Note:** Nextcloud runs on port `443` (HTTPS) by default. Make sure no other
 > service is using this port, or change it to something like `8443` if needed.
+
+> 📚 **For more information:** Visit the [Nextcloud documentation](https://docs.nextcloud.com/)
+> for admin guides, app development, and server tuning.

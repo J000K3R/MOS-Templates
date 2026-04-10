@@ -96,3 +96,6 @@ nav_order: 10
 > 🔒 **2FA Note:** For the OTP keys, you need the **secret key** from your
 > authenticator app setup, not the 6-digit code. This is usually shown when you
 > first enable 2FA as a QR code or text string.
+
+> 📚 **For more information:** Visit the [Free Games Claimer GitHub](https://github.com/vogler/free-games-claimer)
+> for supported platforms, notification options, and advanced configuration.

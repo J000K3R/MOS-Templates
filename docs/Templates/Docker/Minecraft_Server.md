@@ -100,3 +100,6 @@ The `TYPE` variable supports many different server types:
 
 > ⚠️ **Note:** Make sure to open port `25565` in your firewall or router if you
 > want players outside your local network to connect!
+
+> 📚 **For more information:** Visit the [itzg/minecraft-server documentation](https://github.com/itzg/docker-minecraft-server/blob/master/README.md)
+> for all supported server types, mod loaders, and environment variables.

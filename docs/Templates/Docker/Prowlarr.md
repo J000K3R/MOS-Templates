@@ -53,3 +53,7 @@ nav_order: 2
 | `PUID` | `500` | ❌ | User ID for file permissions. |
 | `PGID` | `500` | ❌ | Group ID for file permissions. |
 | `UMASK` | `022` | ❌ | File creation mask for new files. |
+
+---
+
+> 📚 **For more information:** Visit the [Servarr Wiki](https://wiki.servarr.com/prowlarr) for indexer setup guides and *arr app integration details.

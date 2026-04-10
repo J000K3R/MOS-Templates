@@ -83,3 +83,6 @@ No ports exposed — the Agent connects **outbound** to the Beszel Hub only.
 > ```
 > If the port is taken, change `LISTEN` to a free port and update the port in the
 > Beszel Hub UI accordingly!
+
+> 📚 **For more information:** Visit the [Beszel documentation](https://beszel.dev/)
+> for additional monitoring options and troubleshooting guides.

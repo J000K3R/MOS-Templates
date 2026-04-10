@@ -69,3 +69,6 @@ No environment variables required for this container.
 > 💡 **Tip:** You can expose multiple services through a single Cloudflared tunnel
 > using **Public Hostnames** in the Cloudflare Zero Trust Dashboard — no need to
 > run multiple containers!
+
+> 📚 **For more information:** Visit the [Cloudflare Tunnel documentation](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/)
+> for advanced tunnel configuration and access policies.

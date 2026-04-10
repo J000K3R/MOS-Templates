@@ -75,3 +75,6 @@ No volumes required for this container.
 
 > 💡 **Tip:** Collabora CODE works best together with **Nextcloud** for a complete
 > self-hosted office experience. Make sure to add your Nextcloud domain to `aliasgroup1`!
+
+> 📚 **For more information:** Visit the [Collabora Online documentation](https://www.collaboraonline.com/code/)
+> for integration guides and configuration options.

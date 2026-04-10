@@ -69,3 +69,6 @@ including Docker container stats — from a single dashboard.
 > 💡 **Tip:** Deploy the **Beszel Hub** once and then install a
 > **[Beszel Agent](Beszel-Agent.html)** on every server you want to monitor —
 > all metrics flow back to this central dashboard!
+
+> 📚 **For more information:** Visit the [Beszel documentation](https://beszel.dev/)
+> for additional configuration options and alert settings.

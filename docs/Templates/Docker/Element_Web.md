@@ -93,3 +93,6 @@ Make sure the file exists at `/mnt/cache/appdata/element-web/config/config.json`
 
 > 💡 **Tip:** Element Web works best behind a **reverse proxy with SSL** —
 > many Matrix features like VoIP require a secure HTTPS connection to function correctly.
+
+> 📚 **For more information:** Visit the [Element documentation](https://element.io/)
+> for Matrix client features and homeserver setup guides.

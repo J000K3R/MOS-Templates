@@ -86,3 +86,6 @@ curl --request POST \
 > 🔒 **Security Note:** JavaScript is disabled by default (`--chromium-disable-javascript=true`)
 > and only local files are allowed (`--chromium-allow-list=file:///tmp/.*`).
 > This is the recommended secure configuration.
+
+> 📚 **For more information:** Visit the [Gotenberg documentation](https://gotenberg.dev/)
+> for all available API endpoints, conversion options, and performance tuning.

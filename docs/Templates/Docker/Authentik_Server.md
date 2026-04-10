@@ -96,3 +96,6 @@ to large production clusters.
 
 > 💡 **Tip:** Authentik Server and **Authentik Worker** need to be deployed together
 > and share the same configuration values.
+
+> 📚 **For more information:** Visit the [authentik documentation](https://docs.goauthentik.io/)
+> for detailed setup guides, SSO integration instructions, and advanced security features.

@@ -96,3 +96,6 @@ Seerr works seamlessly with the following services:
 
 > ⚠️ **Note:** Make sure your media server (Jellyfin/Plex/Emby) is running and
 > accessible before completing the Seerr setup wizard.
+
+> 📚 **For more information:** Visit the [Seerr documentation](https://github.com/seerr-team/seerr/blob/main/README.md)
+> for additional integration options and notification settings.

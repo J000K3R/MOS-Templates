@@ -94,3 +94,6 @@ No ports exposed — the Worker runs as a background service only.
 
 > 💡 **Tip:** The Worker runs as `root` internally to manage certificates and the
 > Docker socket. This is expected behavior for authentik.
+
+> 📚 **For more information:** Visit the [authentik documentation](https://docs.goauthentik.io/)
+> for detailed information about Worker configuration and architecture.

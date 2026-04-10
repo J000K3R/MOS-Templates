@@ -84,3 +84,6 @@ Copy the output and paste it as the value for `SECRET_ENCRYPTION_KEY`.
 
 > ⚠️ **Note:** Keep your `SECRET_ENCRYPTION_KEY` safe and backed up — losing it
 > means losing access to all encrypted data stored in Homarr!
+
+> 📚 **For more information:** Visit the [Homarr documentation](https://homarr.dev/)
+> for widget configuration, theming options, and integration guides.

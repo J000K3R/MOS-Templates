@@ -115,3 +115,6 @@ postgres://tracearr:mysecretpassword@192.168.11.253:5432/tracearr
 
 > 💡 **Tip:** Set `CORS_ORIGIN` to your specific domain instead of `*` in
 > production for better security — e.g. `https://tracearr.yourdomain.com`
+
+> 📚 **For more information:** Visit the [Tracearr GitHub](https://github.com/connorgallopo/tracearr)
+> for additional configuration options and feature updates.

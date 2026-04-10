@@ -95,3 +95,6 @@ features.
 > ```bash
 > echo -n "yourpassword" | npx argon2-cli -e
 > ```
+
+> 📚 **For more information:** Visit the [code-server documentation](https://coder.com/docs/code-server)
+> for IDE configuration, extension management, and advanced usage.

@@ -76,3 +76,6 @@ curl -X PUT --data-binary @document.pdf \
 
 > 💡 **Tip:** Apache Tika is often used together with **Paperless-NGX** or
 > **Nextcloud** for automatic document processing.
+
+> 📚 **For more information:** Visit the [Apache Tika documentation](https://tika.apache.org/)
+> for details on all supported document formats and API endpoints.
