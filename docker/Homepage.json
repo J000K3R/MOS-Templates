@@ -68,6 +68,13 @@
       "value": "Europe/Vienna",
       "mask": false,
       "description": "Timezone for the container."
+    },
+    {
+      "name": "Allowed Hosts",
+      "key": "HOMEPAGE_ALLOWED_HOSTS",
+      "value": "localhost:3000,127.0.0.1:3000",
+      "mask": false,
+      "description": "Comma-separated list of allowed hosts for security. Add your domain when using reverse proxy."
     }
   ],
   "devices": [],

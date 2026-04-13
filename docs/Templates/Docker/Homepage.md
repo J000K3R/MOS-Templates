@@ -51,11 +51,19 @@ Features include service status monitoring, real-time widgets, bookmarks, and a 
 
 ## ⚙️ Environment Variables
 
+### 👤 Permissions
+
 | Variable | Default | Masked | Description |
 |---|---|---|---|
 | `PUID` | `500` | ❌ | User ID for file permissions |
 | `PGID` | `500` | ❌ | Group ID for file permissions |
 | `TZ` | `Europe/Vienna` | ❌ | Timezone for the container |
+
+### 🔒 Security
+
+| Variable | Default | Masked | Description |
+|---|---|---|---|
+| `HOMEPAGE_ALLOWED_HOSTS` | `localhost:3000,127.0.0.1:3000` | ❌ | Allowed hosts for CORS/security. Add your domain when using reverse proxy. |
 
 ---
 
@@ -76,7 +84,17 @@ mkdir -p /mnt/cache/appdata/homepage/icons
 3. Click **Install**
 4. Access Homepage at `http://YOUR_SERVER_IP:3000`
 
-### Step 3: Initial Configuration
+### Step 3: Configure Allowed Hosts (Important!)
+
+If using a reverse proxy (Nginx Proxy Manager, Traefik, etc.), update the `HOMEPAGE_ALLOWED_HOSTS` environment variable:
+
+```
+localhost:3000,127.0.0.1:3000,dashboard.yourdomain.com
+```
+
+Without this, Homepage will show "Invalid Host" errors when accessing via domain.
+
+### Step 4: Initial Configuration
 
 On first start, Homepage creates default config files. Edit them to customize:
 ```bash
