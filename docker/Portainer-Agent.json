@@ -9,7 +9,7 @@
   "post_parameters": null,
   "web_ui_url": null,
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Portainer-Agent.html",
-  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/portainer-agent.png",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/portainer.png",
   "category": [ "productivity" ],
   "project": "https://www.portainer.io/",
   "support": "https://github.com/portainer/portainer/issues",

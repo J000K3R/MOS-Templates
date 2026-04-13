@@ -8,7 +8,7 @@ nav_order: 16
 
 # 🔌 Portainer Agent
 
-<img src="https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/portainer-agent.png" width="80" />
+<img src="https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/portainer.png" width="80" />
 
 **Portainer Agent** is a lightweight component that runs on Docker hosts to allow a central Portainer instance to manage them securely. It creates a secure tunnel between your main Portainer server and remote Docker environments without requiring direct Docker socket exposure over the network.
 
