@@ -1,0 +1,82 @@
+{
+  "name": "Portainer-Agent",
+  "repo": "portainer/agent:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": true,
+  "extra_parameters": "--restart=always",
+  "post_parameters": null,
+  "web_ui_url": null,
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Portainer-Agent.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/portainer-agent.png",
+  "category": [ "productivity" ],
+  "project": "https://www.portainer.io/",
+  "support": "https://github.com/portainer/portainer/issues",
+  "description": "Portainer Agent is a lightweight component that runs on remote Docker hosts to allow Portainer to manage them securely. It provides a secure tunnel between your Portainer instance and remote Docker environments without exposing the Docker socket directly.",
+  "donate": "https://www.portainer.io/pricing",
+  "paths": [
+    {
+      "name": "Docker Socket",
+      "mode": "rw",
+      "host": "/var/run/docker.sock",
+      "container": "/var/run/docker.sock",
+      "description": "Docker socket for remote container management. Required for the agent to function."
+    },
+    {
+      "name": "Docker Volumes",
+      "mode": "rw",
+      "host": "/var/lib/docker/volumes",
+      "container": "/var/lib/docker/volumes",
+      "description": "Docker volumes directory for managing volumes remotely."
+    },
+    {
+      "name": "Host Root",
+      "mode": "ro",
+      "host": "/",
+      "container": "/host",
+      "description": "Host root filesystem mounted as read-only. Used for volume browsing and management."
+    }
+  ],
+  "ports": [
+    {
+      "name": "Agent",
+      "protocol": "tcp",
+      "host": "9001",
+      "container": "9001",
+      "description": "Portainer Agent communication port. Portainer connects to this port to manage the remote Docker host."
+    }
+  ],
+  "variables": [
+    {
+      "name": "Agent Secret",
+      "key": "AGENT_SECRET",
+      "value": "",
+      "mask": true,
+      "description": "Optional: Shared secret for agent authentication. Must match the secret configured in Portainer when adding this environment."
+    },
+    {
+      "name": "PUID",
+      "key": "PUID",
+      "value": "500",
+      "mask": false,
+      "description": "User ID for file permissions."
+    },
+    {
+      "name": "PGID",
+      "key": "PGID",
+      "value": "500",
+      "mask": false,
+      "description": "Group ID for file permissions."
+    },
+    {
+      "name": "TZ",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Timezone for the container."
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
