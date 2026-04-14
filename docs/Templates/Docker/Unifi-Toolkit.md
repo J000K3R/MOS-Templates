@@ -36,7 +36,7 @@ Perfect for Unifi network administrators who want a simplified management interf
 
 | Port | Protocol | Description |
 |---|---|---|
-| `8080` | TCP | Unifi Toolkit web interface |
+| `8000` | TCP | Unifi Toolkit web interface |
 
 ---
 
@@ -115,7 +115,7 @@ Copy the output and save it for the `ENCRYPTION_KEY` variable.
    - Set `UNIFI_API_KEY` with the key from Step 2 (recommended)
    - **OR** set `UNIFI_USERNAME` and `UNIFI_PASSWORD` as fallback
 4. Click **Install**
-5. Access Unifi Toolkit at `http://YOUR_SERVER_IP:8080`
+5. Access Unifi Toolkit at `http://YOUR_SERVER_IP:8000`
 
 ### Step 4: Verify Connection
 

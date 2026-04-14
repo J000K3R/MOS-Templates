@@ -7,7 +7,7 @@
   "privileged": false,
   "extra_parameters": "--restart=unless-stopped",
   "post_parameters": null,
-  "web_ui_url": "http://[IP]:[PORT:8080]/",
+  "web_ui_url": "http://[IP]:[PORT:8000]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Unifi-Toolkit.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/unifi-toolkit.png",
   "category": [ "network" ],
@@ -28,8 +28,8 @@
     {
       "name": "WebUI",
       "protocol": "tcp",
-      "host": "8080",
-      "container": "8080",
+      "host": "8000",
+      "container": "8000",
       "description": "Unifi Toolkit web interface."
     }
   ],
