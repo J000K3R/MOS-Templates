@@ -56,6 +56,13 @@
       "description": "Timezone for the container."
     },
     {
+      "name": "Encryption Key",
+      "key": "ENCRYPTION_KEY",
+      "value": "",
+      "mask": true,
+      "description": "Required: Encryption key for stored credentials. Generate a strong random string (e.g., openssl rand -base64 32). This encrypts your Unifi credentials."
+    },
+    {
       "name": "Deployment Type",
       "key": "DEPLOYMENT_TYPE",
       "value": "local",

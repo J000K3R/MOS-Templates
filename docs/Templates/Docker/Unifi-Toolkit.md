@@ -58,7 +58,13 @@ Perfect for Unifi network administrators who want a simplified management interf
 | `PGID` | `500` | ❌ | Group ID for file permissions |
 | `TZ` | `Europe/Vienna` | ❌ | Timezone for the container |
 
-### 🔧 Deployment Settings
+### � Required Settings
+
+| Variable | Default | Masked | Description |
+|---|---|---|---|
+| `ENCRYPTION_KEY` | `` | ✅ | **Required!** Encryption key for stored credentials. Generate with: `openssl rand -base64 32` |
+
+### � Deployment Settings
 
 | Variable | Default | Masked | Description |
 |---|---|---|---|
@@ -84,7 +90,15 @@ Perfect for Unifi network administrators who want a simplified management interf
 
 You need an existing **Unifi Controller** (self-hosted or cloud key). This tool connects to it via API.
 
-### Step 1: Generate API Key (Recommended)
+### Step 1: Generate Encryption Key
+
+**Required:** Generate a strong encryption key:
+```bash
+openssl rand -base64 32
+```
+Copy the output and save it for the `ENCRYPTION_KEY` variable.
+
+### Step 2: Generate API Key (Recommended)
 
 1. Login to your **Unifi Controller** web interface
 2. Go to **Settings** (gear icon) → **Admins**
@@ -92,17 +106,18 @@ You need an existing **Unifi Controller** (self-hosted or cloud key). This tool 
 4. Click **Create API Key**
 5. Copy the API key (you won't see it again!)
 
-### Step 2: Install via MOS Hub
+### Step 3: Install via MOS Hub
 
 1. Open the **MOS Hub** and search for **Unifi-Toolkit**
-2. Configure the Unifi Controller connection:
+2. **Set the Encryption Key** - Paste the key from Step 1 into `ENCRYPTION_KEY`
+3. Configure the Unifi Controller connection:
    - Set `UNIFI_CONTROLLER_URL` to your controller (e.g., `https://192.168.1.1`)
-   - Set `UNIFI_API_KEY` with the key you just generated (recommended)
+   - Set `UNIFI_API_KEY` with the key from Step 2 (recommended)
    - **OR** set `UNIFI_USERNAME` and `UNIFI_PASSWORD` as fallback
-3. Click **Install**
-4. Access Unifi Toolkit at `http://YOUR_SERVER_IP:8080`
+4. Click **Install**
+5. Access Unifi Toolkit at `http://YOUR_SERVER_IP:8080`
 
-### Step 3: Verify Connection
+### Step 4: Verify Connection
 
 1. Open the web interface
 2. The toolkit should automatically connect to your Unifi Controller
@@ -221,6 +236,16 @@ The API Key is the most secure way to connect:
 ---
 
 ## 🛠️ Troubleshooting
+
+### "ERROR: No .env file found and ENCRYPTION_KEY not set!"
+
+**This is the most common error!** You must set the `ENCRYPTION_KEY` environment variable.
+
+**Solution:**
+1. Generate a key: `openssl rand -base64 32`
+2. Copy the output (it looks like: `aBcD1234...`)
+3. Paste it into the `ENCRYPTION_KEY` field in MOS Hub
+4. Redeploy the container
 
 ### Connection Failed
 
