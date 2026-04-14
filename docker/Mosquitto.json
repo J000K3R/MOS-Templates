@@ -1,0 +1,89 @@
+{
+  "name": "Mosquitto",
+  "repo": "eclipse-mosquitto:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": null,
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Mosquitto.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/mosquitto.png",
+  "category": [ "network" ],
+  "project": "https://mosquitto.org/",
+  "support": "https://github.com/eclipse/mosquitto/issues",
+  "description": "Eclipse Mosquitto is an open source message broker that implements the MQTT protocol. It is lightweight and suitable for IoT devices, home automation, and messaging between applications. Supports MQTT 3.1, 3.1.1, and 5.0.",
+  "donate": "https://www.eclipse.org/sponsor/",
+  "paths": [
+    {
+      "name": "Config",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/mosquitto/config",
+      "container": "/mosquitto/config",
+      "description": "Mosquitto configuration files including mosquitto.conf, password files, and ACLs."
+    },
+    {
+      "name": "Data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/mosquitto/data",
+      "container": "/mosquitto/data",
+      "description": "Persistent data storage for retained messages and persistence database."
+    },
+    {
+      "name": "Log",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/mosquitto/log",
+      "container": "/mosquitto/log",
+      "description": "Mosquitto log files."
+    }
+  ],
+  "ports": [
+    {
+      "name": "MQTT",
+      "protocol": "tcp",
+      "host": "1883",
+      "container": "1883",
+      "description": "Standard MQTT port for device connections."
+    },
+    {
+      "name": "MQTT over WebSocket",
+      "protocol": "tcp",
+      "host": "9001",
+      "container": "9001",
+      "description": "MQTT over WebSocket for browser-based clients."
+    },
+    {
+      "name": "MQTT over TLS",
+      "protocol": "tcp",
+      "host": "8883",
+      "container": "8883",
+      "description": "Secure MQTT port with TLS encryption (requires certificate setup)."
+    }
+  ],
+  "variables": [
+    {
+      "name": "PUID",
+      "key": "PUID",
+      "value": "500",
+      "mask": false,
+      "description": "User ID for file permissions."
+    },
+    {
+      "name": "PGID",
+      "key": "PGID",
+      "value": "500",
+      "mask": false,
+      "description": "Group ID for file permissions."
+    },
+    {
+      "name": "TZ",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Timezone for the container."
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
