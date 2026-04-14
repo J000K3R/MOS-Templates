@@ -1,6 +1,6 @@
 {
   "name": "Dashdot",
-  "repo": "mauricen/dashdot:latest",
+  "repo": "mauricenino/dashdot:latest",
   "network": "bridge",
   "custom_ip": null,
   "default_shell": "sh",

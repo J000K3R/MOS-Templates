@@ -16,7 +16,7 @@ Perfect for monitoring your MOS Hub server at a glance, whether on a large monit
 
 🏷️ **Category:** Monitoring
 
-🐳 **Image:** `mauricen/dashdot:latest`
+🐳 **Image:** `mauricenino/dashdot:latest`
 
 ---
 
