@@ -1,0 +1,180 @@
+{
+  "name": "Tdarr",
+  "repo": "ghcr.io/haveagitgat/tdarr:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:8265]",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Tdarr.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/tdarr.png",
+  "category": [ "media" ],
+  "project": "https://github.com/haveagitgat/tdarr",
+  "support": "https://github.com/haveagitgat/tdarr/issues",
+  "description": "Tdarr is a distributed transcoding system for automating media library management. It processes your media files in parallel across multiple nodes, supporting both CPU and GPU (NVENC/VAAPI/QSV) transcoding with FFmpeg and HandBrake.",
+  "donate": "",
+  "paths": [
+    {
+      "name": "Server Data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/tdarr/server",
+      "container": "/app/server",
+      "description": "Tdarr Server database, plugins, and samples."
+    },
+    {
+      "name": "Configs",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/tdarr/configs",
+      "container": "/app/configs",
+      "description": "Server and Node configuration files (Tdarr_Server_Config.json, Tdarr_Node_Config.json)."
+    },
+    {
+      "name": "Logs",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/tdarr/logs",
+      "container": "/app/logs",
+      "description": "Tdarr Server and Node log files."
+    },
+    {
+      "name": "Media Library",
+      "mode": "rw",
+      "host": "/mnt/media",
+      "container": "/media",
+      "description": "Your media library (movies, TV shows). Must match Radarr/Sonarr paths."
+    },
+    {
+      "name": "Transcode Cache",
+      "mode": "rw",
+      "host": "/mnt/cache/tdarr/transcode_cache",
+      "container": "/temp",
+      "description": "Temporary transcode cache directory. Use fast storage (SSD recommended)."
+    }
+  ],
+  "ports": [
+    {
+      "name": "WebUI",
+      "protocol": "tcp",
+      "host": "8265",
+      "container": "8265",
+      "description": "Tdarr web interface port."
+    },
+    {
+      "name": "Server Port",
+      "protocol": "tcp",
+      "host": "8266",
+      "container": "8266",
+      "description": "Tdarr Server communication port (used by nodes to connect)."
+    }
+  ],
+  "variables": [
+    {
+      "name": "Server IP",
+      "key": "serverIP",
+      "value": "0.0.0.0",
+      "mask": false,
+      "description": "Tdarr Server bind address (0.0.0.0 for all interfaces)."
+    },
+    {
+      "name": "Server Port",
+      "key": "serverPort",
+      "value": "8266",
+      "mask": false,
+      "description": "Tdarr Server communication port."
+    },
+    {
+      "name": "WebUI Port",
+      "key": "webUIPort",
+      "value": "8265",
+      "mask": false,
+      "description": "Web interface port for Tdarr dashboard."
+    },
+    {
+      "name": "Internal Node",
+      "key": "internalNode",
+      "value": "true",
+      "mask": false,
+      "description": "Enable the Tdarr Node inside the Server container (recommended for single-node setups)."
+    },
+    {
+      "name": "In Container",
+      "key": "inContainer",
+      "value": "true",
+      "mask": false,
+      "description": "Set to true when running inside Docker."
+    },
+    {
+      "name": "FFmpeg Version",
+      "key": "ffmpegVersion",
+      "value": "7",
+      "mask": false,
+      "description": "FFmpeg version to use (6 or 7)."
+    },
+    {
+      "name": "Node Name",
+      "key": "nodeName",
+      "value": "MainNode",
+      "mask": false,
+      "description": "Name for the internal Tdarr Node."
+    },
+    {
+      "name": "Authentication",
+      "key": "auth",
+      "value": "false",
+      "mask": false,
+      "description": "Enable password protection for the web UI (set to true and configure in the UI)."
+    },
+    {
+      "name": "NVIDIA Driver Capabilities",
+      "key": "NVIDIA_DRIVER_CAPABILITIES",
+      "value": "all",
+      "mask": false,
+      "description": "NVIDIA GPU capabilities for NVENC transcoding. Set to 'all' when using NVIDIA GPU."
+    },
+    {
+      "name": "NVIDIA Visible Devices",
+      "key": "NVIDIA_VISIBLE_DEVICES",
+      "value": "all",
+      "mask": false,
+      "description": "Which NVIDIA GPUs to expose to the container. Set to 'all' or specific GPU UUID."
+    },
+    {
+      "name": "PUID",
+      "key": "PUID",
+      "value": "500",
+      "mask": false,
+      "description": "User ID for file permissions."
+    },
+    {
+      "name": "PGID",
+      "key": "PGID",
+      "value": "500",
+      "mask": false,
+      "description": "Group ID for file permissions."
+    },
+    {
+      "name": "TZ",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Timezone for the container."
+    }
+  ],
+  "devices": [
+    {
+      "name": "DRI (VAAPI/QSV)",
+      "host": "/dev/dri",
+      "container": "/dev/dri",
+      "description": "GPU device for Intel/AMD VAAPI or Intel QSV hardware transcoding. Remove if using NVIDIA only."
+    }
+  ],
+  "gpus": [
+    {
+      "driver": "nvidia",
+      "count": "all",
+      "capabilities": [ "gpu" ],
+      "description": "NVIDIA GPU for NVENC hardware transcoding. Requires NVIDIA Container Toolkit on host. Remove if using Intel/AMD only."
+    }
+  ]
+}
