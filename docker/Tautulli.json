@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:8181]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Tautulli.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/tautulli.png",
-  "category": [ "media" ],
+  "category": [ "Media" ],
   "project": "https://github.com/Tautulli/Tautulli",
   "support": "https://github.com/Tautulli/Tautulli/issues",
   "description": "Tautulli is a Python-based monitoring and tracking tool for Plex Media Server. It provides detailed statistics, real-time activity monitoring, and notifications about your Plex library usage.",

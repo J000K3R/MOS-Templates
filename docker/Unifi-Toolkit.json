@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:8000]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Unifi-Toolkit.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/unifi-toolkit.png",
-  "category": [ "network" ],
+  "category": [ "Network" ],
   "project": "https://github.com/Crosstalk-Solutions/unifi-toolkit",
   "support": "https://github.com/Crosstalk-Solutions/unifi-toolkit/issues",
   "description": "A third-party web-based toolkit for managing Ubiquiti Unifi networks (not affiliated with Ubiquiti). Provides an alternative interface for configuring Unifi devices. Requires an existing Unifi Controller to connect to via API.",

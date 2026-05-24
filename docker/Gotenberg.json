@@ -10,7 +10,7 @@
   "web_ui_url": null,
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Gotenberg.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/gotenberg.png",
-  "category": [ "productivity" ],
+  "category": [ "Productivity" ],
   "project": "https://github.com/gotenberg/gotenberg",
   "support": "https://github.com/gotenberg/gotenberg/issues",
   "description": "Gotenberg provides a developer-friendly API to interact with powerful tools like Chromium and LibreOffice for converting numerous document formats (HTML, Markdown, Word, Excel, etc.) into PDF files, and more!",

@@ -15,7 +15,7 @@ Formerly known as Vector and Riot, it provides a full-featured messaging experie
 with end-to-end encryption, voice & video calls, and room management — all
 self-hostable.
 
-🏷️ **Category:** Cloud, Productivity, Network
+🏷️ **Category:** Hosting, Productivity, Network
 
 🐳 **Image:** `vectorim/element-web:latest`
 

@@ -10,7 +10,7 @@
   "web_ui_url": "http://172.16.0.21:[PORT:8080]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/KitchenOwl.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/kitchenowl.png",
-  "category": [ "productivity" ],
+  "category": [ "Productivity" ],
   "project": "https://github.com/TomBursch/kitchenowl",
   "support": "https://github.com/TomBursch/kitchenowl/issues",
   "description": "KitchenOwl is a smart self-hosted grocery list and recipe manager. Easily add items to your shopping list before you go shopping. You can also create recipes and get suggestions on what you want to cook. Track your expenses so you know how much you've spent.",

@@ -10,7 +10,7 @@
   "web_ui_url": null,
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Mosquitto.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/mosquitto.png",
-  "category": [ "network" ],
+  "category": [ "Network" ],
   "project": "https://mosquitto.org/",
   "support": "https://github.com/eclipse/mosquitto/issues",
   "description": "Eclipse Mosquitto is an open source message broker that implements the MQTT protocol. It is lightweight and suitable for IoT devices, home automation, and messaging between applications. Supports MQTT 3.1, 3.1.1, and 5.0.",

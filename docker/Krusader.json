@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:8080]",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Krusader.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/krusader.png",
-  "category": [ "productivity" ],
+  "category": [ "Productivity" ],
   "project": "https://krusader.org/",
   "support": "https://invent.kde.org/utilities/krusader/-/issues",
   "description": "Krusader is an advanced twin panel (commander style) file manager for KDE Plasma and other desktops in the *nix world, similar to Midnight or Total Commander. It provides all the file management features you could possibly want.",

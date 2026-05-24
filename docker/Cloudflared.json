@@ -10,7 +10,7 @@
   "web_ui_url": null,
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Cloudflared.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/cloudflare.png",
-  "category": [ "web" ],
+  "category": [ "Hosting" ],
   "project": "https://github.com/cloudflare/cloudflared",
   "support": "https://github.com/cloudflare/cloudflared/issues",
   "description": "Contains the command-line client for Cloudflare Tunnel, a tunneling daemon that proxies traffic from the Cloudflare network to your origins. This daemon sits between Cloudflare network and your origin (e.g. a webserver). Cloudflare attracts client requests and sends them to you via this daemon, without requiring you to poke holes on your firewall your origin can remain as closed as possible.",

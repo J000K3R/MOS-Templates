@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:8686]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Lidarr.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/lidarr.png",
-  "category": [ "media" ],
+  "category": [ "Media" ],
   "project": "https://github.com/Lidarr/Lidarr",
   "support": "https://github.com/Lidarr/Lidarr/issues",
   "description": "Lidarr is a music collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new albums from your favorite artists and will grab, sort and rename them.",

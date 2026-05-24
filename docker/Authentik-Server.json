@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:9000]",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Authentik_Server.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/authentik.png",
-  "category": [ "web" ],
+  "category": [ "Hosting" ],
   "project": "https://github.com/goauthentik/authentik",
   "support": "https://github.com/goauthentik/authentik/issues",
   "description": "authentik is an open-source Identity Provider (IdP) for modern SSO. It supports SAML, OAuth2/OIDC, LDAP, RADIUS, and more, designed for self-hosting from small labs to large production clusters.",

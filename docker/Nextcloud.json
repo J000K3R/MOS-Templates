@@ -10,7 +10,7 @@
   "web_ui_url": "https://[IP]:[PORT:443]",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Nextcloud.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/nextcloud.png",
-  "category": [ "cloud" ],
+  "category": [ "Hosting" ],
   "project": "https://github.com/linuxserver/docker-nextcloud",
   "support": "https://github.com/linuxserver/docker-nextcloud/issues",
   "description": "Nextcloud gives you access to all your files wherever you are. Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices. Through Nextcloud you also access, sync and share your existing data on that FTP drive at the office, a Dropbox or a NAS you have at home.",

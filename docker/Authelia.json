@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:9091]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Authelia.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/authelia.png",
-  "category": [ "security" ],
+  "category": [ "Security" ],
   "project": "https://github.com/authelia/authelia",
   "support": "https://github.com/authelia/authelia/issues",
   "description": "Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion for reverse proxies to protect your applications.",

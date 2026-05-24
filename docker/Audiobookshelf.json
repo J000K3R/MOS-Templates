@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:13378]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Audiobookshelf.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/audiobookshelf.png",
-  "category": [ "media" ],
+  "category": [ "Media" ],
   "project": "https://github.com/advplyr/audiobookshelf",
   "support": "https://github.com/advplyr/audiobookshelf/issues",
   "description": "Audiobookshelf is a self-hosted audiobook and podcast server with an elegant web player and mobile apps. Features include multi-user support, progress syncing, offline listening, and automatic metadata fetching.",

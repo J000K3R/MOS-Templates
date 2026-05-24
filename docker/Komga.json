@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:25600]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Komga.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/komga.png",
-  "category": [ "media" ],
+  "category": [ "Media" ],
   "project": "https://github.com/gotson/komga",
   "support": "https://github.com/gotson/komga/issues",
   "description": "Komga is a free and open source comics/mangas/media server. It allows you to manage and read your local comics, manga, and books from a modern web interface with support for multiple users, OPDS, and mobile apps.",

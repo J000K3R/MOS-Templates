@@ -10,7 +10,7 @@
   "web_ui_url": null,
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Beszel-Agent.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/beszel.png",
-  "category": ["monitoring"],
+  "category": ["Monitoring"],
   "project": "https://github.com/henrygd/beszel",
   "support": "https://github.com/henrygd/beszel/issues",
   "description": "Beszel Agent runs on each server you want to monitor. It collects system metrics (CPU, memory, disk, network) and Docker container stats, then reports them back to the Beszel Hub.",

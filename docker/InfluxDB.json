@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:8086]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/InfluxDB.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/influxdb.png",
-  "category": [ "database" ],
+  "category": [ "System" ],
   "project": "https://github.com/influxdata/influxdb",
   "support": "https://github.com/influxdata/influxdb/issues",
   "description": "InfluxDB is an open-source time series database designed to handle high write and query loads. It is the perfect choice for storing metrics, events, and real-time analytics data from your applications and infrastructure.",

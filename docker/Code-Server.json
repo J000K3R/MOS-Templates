@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:8443]",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Code_Server.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/visual-studio-code.png",
-  "category": [ "productivity" ],
+  "category": [ "Productivity" ],
   "project": "https://github.com/microsoft/vscode",
   "support": "https://github.com/microsoft/vscode/issues",
   "description": "Visual Studio Code combines the simplicity of a code editor with what developers need for their core edit-build-debug cycle. It provides comprehensive code editing, navigation, and understanding support along with lightweight debugging, a rich extensibility model, and lightweight integration with existing tools.",

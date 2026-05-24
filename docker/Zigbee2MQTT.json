@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:8080]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Zigbee2MQTT.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/zigbee2mqtt.png",
-  "category": [ "network", "smart_home" ],
+  "category": [ "Network", "Home Automation" ],
   "project": "https://www.zigbee2mqtt.io/",
   "support": "https://github.com/Koenkk/zigbee2mqtt/issues",
   "description": "Zigbee to MQTT bridge. Use Zigbee devices without the vendor's gateway. Supports USB and network (TCP) coordinators.",

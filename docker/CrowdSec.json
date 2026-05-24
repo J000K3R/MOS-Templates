@@ -10,7 +10,7 @@
   "web_ui_url": null,
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/CrowdSec.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/crowdsec.png",
-  "category": [ "security" ],
+  "category": [ "Security" ],
   "project": "https://github.com/crowdsecurity/crowdsec",
   "support": "https://github.com/crowdsecurity/crowdsec/issues",
   "description": "CrowdSec is an open-source, lightweight, and collaborative intrusion detection/prevention system that detects malicious behavior and can block IPs. It analyzes logs, shares threat intelligence, and works with bouncers to protect your infrastructure.",

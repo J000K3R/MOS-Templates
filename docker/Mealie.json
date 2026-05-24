@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:9000]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Mealie.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/mealie.png",
-  "category": [ "productivity" ],
+  "category": [ "Productivity" ],
   "project": "https://mealie.io/",
   "support": "https://github.com/mealie-recipes/mealie/issues",
   "description": "Mealie is a self-hosted recipe manager and meal planner with a beautiful web interface. Import recipes from URLs, organize your collection, plan meals, and generate shopping lists. Features user management, API access, and mobile-friendly design.",

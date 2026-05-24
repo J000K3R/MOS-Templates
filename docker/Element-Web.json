@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:80]",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Element_Web.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/element.png",
-  "category": [ "cloud", "productivity", "network" ],
+  "category": [ "Hosting", "Productivity", "Network" ],
   "project": "https://github.com/element-hq/element-web",
   "support": "https://github.com/element-hq/element-web/issues",
   "description": "Element (formerly known as Vector and Riot) is a Matrix web client built using the Matrix JS SDK.",

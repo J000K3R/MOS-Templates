@@ -14,7 +14,7 @@ nav_order: 12
 
 Features include service status monitoring, real-time widgets, bookmarks, and a beautiful, customizable interface that puts all your important information in one place.
 
-🏷️ **Category:** Productivity
+🏷️ **Category:** Monitoring
 
 🐳 **Image:** `ghcr.io/gethomepage/homepage:latest`
 

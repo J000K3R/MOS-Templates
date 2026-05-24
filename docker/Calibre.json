@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:8080]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Calibre.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/calibre.png",
-  "category": [ "media" ],
+  "category": [ "Media" ],
   "project": "https://calibre-ebook.com/",
   "support": "https://github.com/linuxserver/docker-calibre/issues",
   "description": "Calibre is a powerful and easy to use e-book manager. Users say it's outstanding and a must-have. It'll allow you to do nearly everything and it takes things a step beyond normal e-book software. Includes desktop GUI accessible via web browser.",

@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:8080]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/FreshRSS.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/freshrss.png",
-  "category": [ "productivity" ],
+  "category": [ "Productivity" ],
   "project": "https://freshrss.org/",
   "support": "https://github.com/FreshRSS/FreshRSS/issues",
   "description": "FreshRSS is a self-hosted RSS feed aggregator like Leed or Kriss Feed. It is lightweight, easy to work with, powerful, and customizable.",

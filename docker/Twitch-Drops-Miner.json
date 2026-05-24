@@ -10,7 +10,7 @@
   "web_ui_url": null,
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Twitch-Drops-Miner.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/twitch-drops-miner.png",
-  "category": [ "games" ],
+  "category": [ "Game Server" ],
   "project": "https://github.com/DevilXD/TwitchDropsMiner",
   "support": "https://github.com/DevilXD/TwitchDropsMiner/issues",
   "description": "An unofficial Docker container for automatically mining Twitch drops with a web-based GUI interface. It watches Twitch streams on your behalf to earn and claim rewards. Note: Use at your own risk and ensure compliance with Twitch Terms of Service. Issues should NOT be reported to the original TwitchDropsMiner project.",

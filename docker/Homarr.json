@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:7575]",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Homarr.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/homarr.png",
-  "category": [ "productivity" ],
+  "category": [ "Productivity" ],
   "project": "https://github.com/homarr-labs/homarr",
   "support": "https://github.com/homarr-labs/homarr/issues",
   "description": "A sleek, modern dashboard that puts all of your apps and services at your fingertips. Control everything in one convenient location. Seamlessly integrates with the apps you've added, providing you with valuable information.",

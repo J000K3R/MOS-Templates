@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:3000]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Tracearr.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/tracearr.png",
-  "category": [ "media" ],
+  "category": [ "Media" ],
   "project": "https://github.com/connorgallopo/tracearr",
   "support": "https://github.com/connorgallopo/Tracearr/issues",
   "description": "Tracearr is a monitoring platform for Plex, Jellyfin, and Emby. Track streams in real-time, dig into playback analytics, and spot account sharing before it gets out of hand.",

@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:8080]",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Dozzle.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/dozzle.png",
-  "category": [ "productivity" ],
+  "category": [ "Productivity" ],
   "project": "https://github.com/amir20/dozzle",
   "support": "https://github.com/amir20/dozzle/issues",
   "description": "Dozzle is a small lightweight application with a web based interface to monitor Docker logs. It doesn't store any log files. It is for live monitoring of your container logs only.",

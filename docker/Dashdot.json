@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:3001]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Dashdot.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/dashdot.png",
-  "category": [ "monitoring" ],
+  "category": [ "Monitoring" ],
   "project": "https://getdashdot.com/",
   "support": "https://github.com/MauriceNino/dashdot/issues",
   "description": "Dashdot is a modern, beautiful server dashboard that displays system information like CPU, RAM, storage, network, and GPU usage in real-time. It features a sleek, customizable interface with support for multiple widgets and themes.",

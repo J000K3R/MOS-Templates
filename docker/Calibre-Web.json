@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:8083]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Calibre-Web.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/calibre-web.png",
-  "category": [ "media" ],
+  "category": [ "Media" ],
   "project": "https://github.com/janeczku/calibre-web",
   "support": "https://github.com/janeczku/calibre-web/issues",
   "description": "Calibre-Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database. It requires a Calibre library but provides a much better web experience than Calibre's built-in server.",

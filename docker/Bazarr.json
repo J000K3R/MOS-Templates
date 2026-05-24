@@ -10,7 +10,7 @@
   "web_ui_url": "http://[IP]:[PORT:6767]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Bazarr.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/bazarr.png",
-  "category": [ "media" ],
+  "category": [ "Media" ],
   "project": "https://github.com/morpheus65535/bazarr",
   "support": "https://github.com/morpheus65535/bazarr/issues",
   "description": "Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.",

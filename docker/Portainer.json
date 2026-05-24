@@ -10,7 +10,7 @@
   "web_ui_url": "https://[IP]:[PORT:9443]/",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Portainer.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/portainer.png",
-  "category": [ "productivity" ],
+  "category": [ "System" ],
   "project": "https://www.portainer.io/",
   "support": "https://github.com/portainer/portainer/issues",
   "description": "Portainer Community Edition is a lightweight service delivery platform for containerized applications that can be used to manage Docker, Swarm, Kubernetes and ACI environments. It is designed to be as simple to deploy as it is to use.",

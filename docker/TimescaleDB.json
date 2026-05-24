@@ -10,7 +10,7 @@
   "web_ui_url": "",
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/TimescaleDB.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/tigerdata.png",
-  "category": [ "database" ],
+  "category": [ "System" ],
   "project": "https://github.com/timescale/timescaledb",
   "support": "https://github.com/timescale/timescaledb/issues",
   "description": "TimescaleDB is a PostgreSQL extension optimized for time-series data. This container runs a full PostgreSQL 15 instance with TimescaleDB pre-installed, intended for use with Tracearr.",

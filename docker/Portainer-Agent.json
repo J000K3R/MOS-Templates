@@ -10,7 +10,7 @@
   "web_ui_url": null,
   "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Portainer-Agent.html",
   "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/portainer.png",
-  "category": [ "productivity" ],
+  "category": [ "System" ],
   "project": "https://www.portainer.io/",
   "support": "https://github.com/portainer/portainer/issues",
   "description": "Portainer Agent is a lightweight component that runs on remote Docker hosts to allow Portainer to manage them securely. It provides a secure tunnel between your Portainer instance and remote Docker environments without exposing the Docker socket directly.",
