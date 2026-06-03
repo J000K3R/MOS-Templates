@@ -23,7 +23,7 @@
       "name": "App Data",
       "mode": "rw",
       "host": "/mnt/cache/appdata/fredbet",
-      "container": "/home/appuser",
+      "container": "/data",
       "description": "H2 database, uploaded images, and application data."
     }
   ],
@@ -40,9 +40,9 @@
     {
       "name": "Datasource URL",
       "key": "SPRING_DATASOURCE_URL",
-      "value": "jdbc:h2:file:/home/appuser/fredbetdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE",
+      "value": "jdbc:h2:file:/data/fredbetdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE",
       "mask": false,
-      "description": "JDBC datasource URL. Default uses H2 file-based database."
+      "description": "JDBC datasource URL. Default uses H2 file-based database in /data."
     },
     {
       "name": "Datasource Driver",

@@ -43,7 +43,7 @@ managing your betting game.
 
 | Host Path | Container Path | Mode | Description |
 |---|---|---|---|
-| `/mnt/cache/appdata/fredbet` | `/home/appuser` | RW | H2 database, uploaded images & app data |
+| `/mnt/cache/appdata/fredbet` | `/data` | RW | H2 database, uploaded images & app data |
 
 ---
 
@@ -53,7 +53,7 @@ managing your betting game.
 
 | Variable | Default | Masked | Description |
 |---|---|---|---|
-| `SPRING_DATASOURCE_URL` | `jdbc:h2:file:/home/appuser/fredbetdb...` | ❌ | JDBC datasource URL. Default uses H2 file-based DB |
+| `SPRING_DATASOURCE_URL` | `jdbc:h2:file:/data/fredbetdb...` | ❌ | JDBC datasource URL. Default uses H2 file-based DB |
 | `SPRING_DATASOURCE_DRIVER_CLASS_NAME` | `org.h2.Driver` | ❌ | DB driver: `org.h2.Driver`, `org.postgresql.Driver`, `com.mysql.jdbc.Driver`, `org.mariadb.jdbc.Driver` |
 | `SPRING_DATASOURCE_USERNAME` | `sa` | ❌ | Database username |
 | `SPRING_DATASOURCE_PASSWORD` | *(empty)* | ✅ | Database password. Leave empty for H2 default |
