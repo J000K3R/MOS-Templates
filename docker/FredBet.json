@@ -1,0 +1,99 @@
+{
+  "name": "FredBet",
+  "repo": "fred4jupiter/fredbet:4.7.1",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:8080]/",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/FredBet.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/fredbet.png",
+  "category": [
+    "Productivity",
+    "Entertainment"
+  ],
+  "project": "https://github.com/fred4jupiter/fredbet",
+  "support": "https://github.com/fred4jupiter/fredbet/issues",
+  "description": "FredBet \u2013 Simple football betting application. Bet on football championships with friends, with responsive design, image gallery, Excel import/export, and multi-language support.",
+  "donate": "",
+  "paths": [
+    {
+      "name": "App Data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/fredbet",
+      "container": "/data",
+      "description": "H2 database, uploaded images, and application data."
+    }
+  ],
+  "ports": [
+    {
+      "name": "WebUI",
+      "protocol": "tcp",
+      "host": "8080",
+      "container": "8080",
+      "description": "Web interface for FredBet."
+    }
+  ],
+  "variables": [
+    {
+      "name": "Datasource URL",
+      "key": "SPRING_DATASOURCE_URL",
+      "value": "jdbc:h2:file:/data/fredbetdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE",
+      "mask": false,
+      "description": "JDBC datasource URL. Default uses H2 file-based database in /data."
+    },
+    {
+      "name": "Datasource Driver",
+      "key": "SPRING_DATASOURCE_DRIVER_CLASS_NAME",
+      "value": "org.h2.Driver",
+      "mask": false,
+      "description": "Database driver class. Use org.h2.Driver (default), org.postgresql.Driver, com.mysql.jdbc.Driver, or org.mariadb.jdbc.Driver."
+    },
+    {
+      "name": "Datasource Username",
+      "key": "SPRING_DATASOURCE_USERNAME",
+      "value": "sa",
+      "mask": false,
+      "description": "Database username. Default 'sa' for H2."
+    },
+    {
+      "name": "Datasource Password",
+      "key": "SPRING_DATASOURCE_PASSWORD",
+      "value": "",
+      "mask": true,
+      "description": "Database password. Leave empty for H2 default."
+    },
+    {
+      "name": "Admin Username",
+      "key": "FREDBET_ADMIN_USERNAME",
+      "value": "admin",
+      "mask": false,
+      "description": "Initial admin username (created on first boot)."
+    },
+    {
+      "name": "Admin Password",
+      "key": "FREDBET_ADMIN_PASSWORD",
+      "value": "admin",
+      "mask": true,
+      "description": "Initial admin password. Change this immediately after first login!"
+    },
+    {
+      "name": "Default Language",
+      "key": "FREDBET_DEFAULT_LANGUAGE",
+      "value": "de",
+      "mask": false,
+      "description": "Default UI language: de, en, pl, ca, es, sv."
+    },
+    {
+      "name": "Timezone",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Timezone for the container."
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
