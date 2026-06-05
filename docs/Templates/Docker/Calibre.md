@@ -3,7 +3,7 @@ title: 📚 Calibre
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 6
+nav_order: 11
 ---
 
 # 📚 Calibre

@@ -1,4 +1,12 @@
-# WebGrab+Plus
+---
+title: 📺 WebGrabPlus
+layout: default
+parent: 🐳 Docker
+grand_parent: 🗂️ Templates
+nav_order: 48
+---
+
+# 📺 WebGrabPlus
 
 WebGrab+Plus is a multi-site incremental XMLTV EPG grabber. It collects TV program guide data from selected TV guide websites for your favourite channels.
 

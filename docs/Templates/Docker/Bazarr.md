@@ -3,7 +3,7 @@ title: 📝 Bazarr
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 4
+nav_order: 6
 ---
 
 # 📝 Bazarr

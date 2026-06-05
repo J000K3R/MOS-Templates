@@ -3,7 +3,7 @@ title: 📰 FreshRSS
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 27
+nav_order: 21
 ---
 
 # 📰 FreshRSS

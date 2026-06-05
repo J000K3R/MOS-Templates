@@ -3,7 +3,7 @@ title: 🎧 Audiobookshelf
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 5
+nav_order: 2
 ---
 
 # 🎧 Audiobookshelf

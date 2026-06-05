@@ -1,5 +1,5 @@
 {
-  "name": "WebGrab+Plus",
+  "name": "WebGrabPlus",
   "repo": "lscr.io/linuxserver/webgrabplus:latest",
   "network": "bridge",
   "custom_ip": null,

@@ -3,7 +3,7 @@ title: ⚽ WM Pickems
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 30
+nav_order: 49
 ---
 
 # ⚽ WM Pickems

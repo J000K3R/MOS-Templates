@@ -3,7 +3,7 @@ title: 🎬 Tdarr
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 28
+nav_order: 41
 ---
 
 # 🎬 Tdarr

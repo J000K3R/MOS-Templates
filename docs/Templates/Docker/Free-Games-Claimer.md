@@ -3,7 +3,7 @@ title: 🎮 Free Games Claimer
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 10
+nav_order: 20
 ---
 
 # 🎮 Free Games Claimer

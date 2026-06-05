@@ -3,7 +3,7 @@ title: 🎵 Lidarr
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 11
+nav_order: 30
 ---
 
 # 🎵 Lidarr

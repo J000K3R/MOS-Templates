@@ -3,7 +3,7 @@ title: 🔍 Beszel Agent
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 3
+nav_order: 7
 ---
 
 # 🔍 Beszel Agent

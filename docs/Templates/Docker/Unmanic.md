@@ -3,7 +3,7 @@ title: 🎞️ Unmanic
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 18
+nav_order: 46
 ---
 
 # 🎞️ Unmanic

@@ -3,7 +3,7 @@ title: 📝 Collabora CODE
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 5
+nav_order: 14
 ---
 
 # 📝 Collabora CODE

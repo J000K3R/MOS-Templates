@@ -3,7 +3,7 @@ title: 🗂️ Krusader
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 14
+nav_order: 29
 ---
 
 # 🗂️ Krusader

@@ -3,7 +3,7 @@ title: 📄 Gotenberg
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 11
+nav_order: 22
 ---
 
 # 📄 Gotenberg

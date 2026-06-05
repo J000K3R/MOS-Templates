@@ -3,7 +3,7 @@ title: 💻 Code Server
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 7
+nav_order: 13
 ---
 
 # 💻 Code Server

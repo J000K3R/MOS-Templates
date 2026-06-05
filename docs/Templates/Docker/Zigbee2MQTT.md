@@ -3,7 +3,7 @@ title: 🔌 Zigbee2MQTT
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 19
+nav_order: 50
 ---
 
 # 🔌 Zigbee2MQTT

@@ -3,7 +3,7 @@ title: 🪵 Dozzle
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 8
+nav_order: 17
 ---
 
 # 🪵 Dozzle

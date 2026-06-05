@@ -3,7 +3,7 @@ title: 📈 InfluxDB
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 13
+nav_order: 26
 ---
 
 # 📈 InfluxDB

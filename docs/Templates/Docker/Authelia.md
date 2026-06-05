@@ -3,7 +3,7 @@ title: 🔐 Authelia
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 2
+nav_order: 3
 ---
 
 # 🔐 Authelia

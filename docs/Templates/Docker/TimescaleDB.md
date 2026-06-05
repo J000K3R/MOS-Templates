@@ -3,7 +3,7 @@ title: 🐘 TimescaleDB
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 21
+nav_order: 42
 ---
 
 # 🐘 TimescaleDB

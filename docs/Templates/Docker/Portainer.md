@@ -3,7 +3,7 @@ title: 🐳 Portainer CE
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 15
+nav_order: 37
 ---
 
 # 🐳 Portainer Community Edition

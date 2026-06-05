@@ -3,7 +3,7 @@ title: 📡 Mosquitto (MQTT Broker)
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 17
+nav_order: 33
 ---
 
 # 📡 Mosquitto (MQTT Broker)

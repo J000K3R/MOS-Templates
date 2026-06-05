@@ -3,7 +3,7 @@ title: 🛡️ CrowdSec
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 3
+nav_order: 15
 ---
 
 # 🛡️ CrowdSec

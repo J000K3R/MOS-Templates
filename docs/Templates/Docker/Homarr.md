@@ -3,7 +3,7 @@ title: 🏠 Homarr
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 12
+nav_order: 24
 ---
 
 # 🏠 Homarr

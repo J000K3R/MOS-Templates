@@ -3,7 +3,7 @@ title: 🦙 Ollama
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 16
+nav_order: 35
 ---
 
 # 🦙 Ollama

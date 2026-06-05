@@ -3,7 +3,7 @@ title: 🍽️ Mealie
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 26
+nav_order: 31
 ---
 
 # 🍽️ Mealie

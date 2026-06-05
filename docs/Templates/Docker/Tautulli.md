@@ -3,7 +3,7 @@ title: 📺 Tautulli
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 20
+nav_order: 40
 ---
 
 # 📺 Tautulli

@@ -3,7 +3,7 @@ title: 🎮 Twitch Drops Miner
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 25
+nav_order: 44
 ---
 
 # 🎮 Twitch Drops Miner

@@ -3,7 +3,7 @@ title: 📡 Uptime Kuma
 layout: default
 parent: 🐳 Docker
 grand_parent: 🗂️ Templates
-nav_order: 19
+nav_order: 47
 ---
 
 # 📡 Uptime Kuma
