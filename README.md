@@ -29,8 +29,3 @@ MOS Templates integrate directly with the **MOS Hub** and provide:
 | `maintainer.json` | Maintainer & metadata information |
 
 ---
-
-## 🤝 Contributing
-
-Want to add your own template? Check out the full contribution guide on the
-**[documentation site](https://j000k3r.github.io/MOS-Templates/)**.
