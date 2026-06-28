@@ -57,23 +57,6 @@ Perfect for car enthusiasts, fleet owners, and anyone who wants to keep detailed
 | `PGID` | `500` | ❌ | Group ID for file permissions |
 | `TZ` | `Europe/Vienna` | ❌ | Timezone for the container |
 
-### 🔐 Authentication
-
-| Variable | Default | Masked | Description |
-|---|---|---|---|
-| `LUBELOGGER_AUTHENTICATION` | `true` | ❌ | Enable login authentication |
-| `LUBELOGGER_USERNAME` | `admin` | ❌ | Default admin username |
-| `LUBELOGGER_PASSWORD` | `MyPassword123` | ✅ | Default admin password (change after first login!) |
-
-### 📧 Email (Optional)
-
-| Variable | Default | Masked | Description |
-|---|---|---|---|
-| `LUBELOGGER_SMTP_HOST` | _(empty)_ | ❌ | SMTP server host |
-| `LUBELOGGER_SMTP_PORT` | `587` | ❌ | SMTP server port |
-| `LUBELOGGER_SMTP_USERNAME` | _(empty)_ | ❌ | SMTP username |
-| `LUBELOGGER_SMTP_PASSWORD` | _(empty)_ | ✅ | SMTP password |
-
 ### 📝 Logging
 
 | Variable | Default | Masked | Description |
@@ -87,20 +70,13 @@ Perfect for car enthusiasts, fleet owners, and anyone who wants to keep detailed
 ### Step 1: Install via MOS Hub
 
 1. Open the **MOS Hub** and search for **Lubelogger**
-2. Review and optionally customize:
-   - `LUBELOGGER_USERNAME` - Set your admin username
-   - `LUBELOGGER_PASSWORD` - Change the default password
-   - `TZ` - Set your timezone
+2. Review and optionally customize
 3. Click **Install**
 4. Wait for the container to start
 
 ### Step 2: First Login
 
 1. Access Lubelogger at `http://YOUR_SERVER_IP:8080`
-2. Login with the default credentials:
-   - **Username:** `admin` (or your custom `LUBELOGGER_USERNAME`)
-   - **Password:** `MyPassword123` (or your custom `LUBELOGGER_PASSWORD`)
-3. **Immediately change the password** in Settings
 
 ### Step 3: Add Your First Vehicle
 
@@ -123,32 +99,6 @@ Perfect for car enthusiasts, fleet owners, and anyone who wants to keep detailed
    - **Fuel Amount** (liters/gallons)
    - **Cost** per unit
 5. Click **Save** — Lubelogger automatically calculates MPG/L per 100km
-
----
-
-## 🔧 Configuration
-
-### Disable Authentication (Not Recommended)
-
-For local-only or testing environments:
-```
-LUBELOGGER_AUTHENTICATION=false
-```
-Then redeploy the container.
-
-### Enable Email Notifications
-
-Configure SMTP for reminders and reports:
-```
-LUBELOGGER_SMTP_HOST=smtp.yourprovider.com
-LUBELOGGER_SMTP_PORT=587
-LUBELOGGER_SMTP_USERNAME=your@email.com
-LUBELOGGER_SMTP_PASSWORD=yourpassword
-```
-
-### Reverse Proxy Setup
-
-Lubelogger works behind reverse proxies (SWAG, Traefik, Caddy, etc.). Point your proxy to port `8080`.
 
 ---
 
@@ -183,35 +133,6 @@ Lubelogger works behind reverse proxies (SWAG, Traefik, Caddy, etc.). Point your
 - Export data to CSV
 - Cost breakdowns by category
 - Fuel economy trends
-
----
-
-## 🛠️ Troubleshooting
-
-### Cannot Login
-
-1. Verify `LUBELOGGER_AUTHENTICATION` is `true`
-2. Check `LUBELOGGER_USERNAME` and `LUBELOGGER_PASSWORD` values
-3. Restart the container
-
-### Database Errors
-
-1. Check volume permissions: `chown -R 500:500 /mnt/cache/appdata/lubelogger`
-2. Verify PUID/PGID match your system
-3. Restart container
-
-### Email Notifications Not Working
-
-1. Verify SMTP credentials are correct
-2. Check your SMTP provider allows app access
-3. Test with a simple SMTP service (e.g., Gmail with app password)
-4. Check container logs for SMTP errors
-
-### Attachments Not Uploading
-
-1. Check volume permissions on `/App/config`
-2. Verify sufficient disk space
-3. Check `LUBELOGGER_LOG_LEVEL=Debug` for detailed errors
 
 ---
 

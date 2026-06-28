@@ -56,55 +56,6 @@
       "description": "Timezone for the container."
     },
     {
-      "name": "Authentication",
-      "key": "LUBELOGGER_AUTHENTICATION",
-      "value": "true",
-      "mask": false,
-      "description": "Enable login authentication. Set to false only for local/testing use."
-    },
-    {
-      "name": "Admin Username",
-      "key": "LUBELOGGER_USERNAME",
-      "value": "admin",
-      "mask": false,
-      "description": "Default admin username for initial login."
-    },
-    {
-      "name": "Admin Password",
-      "key": "LUBELOGGER_PASSWORD",
-      "value": "MyPassword123",
-      "mask": true,
-      "description": "Default admin password for initial login. Change immediately after first login!"
-    },
-    {
-      "name": "SMTP Host",
-      "key": "LUBELOGGER_SMTP_HOST",
-      "value": "",
-      "mask": false,
-      "description": "SMTP server host for email notifications (optional). Leave empty to disable email."
-    },
-    {
-      "name": "SMTP Port",
-      "key": "LUBELOGGER_SMTP_PORT",
-      "value": "587",
-      "mask": false,
-      "description": "SMTP server port for email notifications."
-    },
-    {
-      "name": "SMTP Username",
-      "key": "LUBELOGGER_SMTP_USERNAME",
-      "value": "",
-      "mask": false,
-      "description": "SMTP username for email authentication."
-    },
-    {
-      "name": "SMTP Password",
-      "key": "LUBELOGGER_SMTP_PASSWORD",
-      "value": "",
-      "mask": true,
-      "description": "SMTP password for email authentication."
-    },
-    {
       "name": "Log Level",
       "key": "LUBELOGGER_LOG_LEVEL",
       "value": "Information",
