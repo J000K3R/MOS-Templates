@@ -1,0 +1,117 @@
+{
+  "name": "Lubelogger",
+  "repo": "ghcr.io/hargata/lubelogger:latest",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:[PORT:8080]/",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Lubelogger.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/lubelogger.png",
+  "category": [ "Productivity" ],
+  "project": "https://github.com/hargata/lubelogger",
+  "support": "https://github.com/hargata/lubelogger/issues",
+  "description": "Lubelogger is a self-hosted vehicle maintenance and fuel mileage tracker. Log repairs, maintenance, fuel purchases, and expenses for multiple vehicles. Generate reports, track costs, and keep your vehicle history organized with a clean web interface.",
+  "donate": "https://github.com/sponsors/hargata",
+  "paths": [
+    {
+      "name": "App Data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/lubelogger",
+      "container": "/App/config",
+      "description": "Lubelogger configuration, database, and uploaded attachments."
+    }
+  ],
+  "ports": [
+    {
+      "name": "WebUI",
+      "protocol": "tcp",
+      "host": "8080",
+      "container": "8080",
+      "description": "Lubelogger web interface (default port 8080)."
+    }
+  ],
+  "variables": [
+    {
+      "name": "PUID",
+      "key": "PUID",
+      "value": "500",
+      "mask": false,
+      "description": "User ID for file permissions."
+    },
+    {
+      "name": "PGID",
+      "key": "PGID",
+      "value": "500",
+      "mask": false,
+      "description": "Group ID for file permissions."
+    },
+    {
+      "name": "TZ",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Timezone for the container."
+    },
+    {
+      "name": "Authentication",
+      "key": "LUBELOGGER_AUTHENTICATION",
+      "value": "true",
+      "mask": false,
+      "description": "Enable login authentication. Set to false only for local/testing use."
+    },
+    {
+      "name": "Admin Username",
+      "key": "LUBELOGGER_USERNAME",
+      "value": "admin",
+      "mask": false,
+      "description": "Default admin username for initial login."
+    },
+    {
+      "name": "Admin Password",
+      "key": "LUBELOGGER_PASSWORD",
+      "value": "MyPassword123",
+      "mask": true,
+      "description": "Default admin password for initial login. Change immediately after first login!"
+    },
+    {
+      "name": "SMTP Host",
+      "key": "LUBELOGGER_SMTP_HOST",
+      "value": "",
+      "mask": false,
+      "description": "SMTP server host for email notifications (optional). Leave empty to disable email."
+    },
+    {
+      "name": "SMTP Port",
+      "key": "LUBELOGGER_SMTP_PORT",
+      "value": "587",
+      "mask": false,
+      "description": "SMTP server port for email notifications."
+    },
+    {
+      "name": "SMTP Username",
+      "key": "LUBELOGGER_SMTP_USERNAME",
+      "value": "",
+      "mask": false,
+      "description": "SMTP username for email authentication."
+    },
+    {
+      "name": "SMTP Password",
+      "key": "LUBELOGGER_SMTP_PASSWORD",
+      "value": "",
+      "mask": true,
+      "description": "SMTP password for email authentication."
+    },
+    {
+      "name": "Log Level",
+      "key": "LUBELOGGER_LOG_LEVEL",
+      "value": "Information",
+      "mask": false,
+      "description": "Logging level (Verbose, Debug, Information, Warning, Error)."
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}

@@ -42,6 +42,7 @@ Each template can be installed directly from the MOS Hub with a single click.
 | 🗂️ **Krusader** | Twin-panel file manager in the browser | [📖 Guide](Docker/Krusader.html) |
 | 📊 **InfluxDB** | Time-series database | [📖 Guide](Docker/InfluxDB.html) |
 | 🎵 **Lidarr** | Music collection manager | [📖 Guide](Docker/Lidarr.html) |
+| 🚗 **Lubelogger** | Self-hosted vehicle maintenance & fuel tracker | [📖 Guide](Docker/Lubelogger.html) |
 | 🍽️ **Mealie** | Self-hosted recipe manager | [📖 Guide](Docker/Mealie.html) |
 | ⛏️ **Minecraft Server** | Self-hosted Minecraft server (Vanilla, Paper, Forge & more) | [📖 Guide](Docker/Minecraft_Server.html) |
 | 📡 **Mosquitto** | Open-source MQTT message broker | [📖 Guide](Docker/Mosquitto.html) |
