@@ -20,8 +20,15 @@
       "name": "App Data",
       "mode": "rw",
       "host": "/mnt/cache/appdata/lubelogger",
-      "container": "/App/config",
+      "container": "/App/data",
       "description": "Lubelogger configuration, database, and uploaded attachments."
+    }
+    {
+      "name": "Keys",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/lubelogger-keys",
+      "container": "/root/.aspnet/DataProtection-Keys",
+      "description": "ASP.NET data protection keys for session encryption."
     }
   ],
   "ports": [
