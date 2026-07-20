@@ -22,7 +22,7 @@
       "host": "/mnt/cache/appdata/lubelogger",
       "container": "/App/data",
       "description": "Lubelogger configuration, database, and uploaded attachments."
-    }
+    },
     {
       "name": "Keys",
       "mode": "rw",
