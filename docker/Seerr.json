@@ -37,37 +37,23 @@
     {
       "name": "Log",
       "key": "LOG_LEVEL",
-      "value": "info",
+      "value": "debug",
       "mask": false,
       "description": "Logging verbosity level (debug, info, warn, error)."
     },
     {
-      "name": "Emby Support",
-      "key": "SEERR_TYPE",
-      "value": "type",
-      "mask": false,
-      "description": "Media server type (jellyfin, plex, emby)."
-    },
-    {
       "name": "PUID",
       "key": "PUID",
-      "value": "1000",
+      "value": "500",
       "mask": false,
       "description": "User ID for file permissions."
     },
     {
       "name": "PGID",
       "key": "PGID",
-      "value": "1000",
+      "value": "500",
       "mask": false,
       "description": "Group ID for file permissions."
-    },
-    {
-      "name": "UMASK",
-      "key": "UMASK",
-      "value": "022",
-      "mask": false,
-      "description": "File creation mask for new files."
     }
   ],
   "devices": []

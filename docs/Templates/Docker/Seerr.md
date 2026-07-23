@@ -53,16 +53,14 @@ to request movies and TV shows.
 
 | Variable | Default | Masked | Description |
 |---|---|---|---|
-| `SEERR_TYPE` | `type` | ❌ | Media server type (`jellyfin`, `plex`, `emby`) |
-| `LOG_LEVEL` | `info` | ❌ | Log verbosity (`debug`, `info`, `warn`, `error`) |
+| `LOG_LEVEL` | `debug` | ❌ | Log verbosity (`debug`, `info`, `warn`, `error`) |
 
 ### 👤 Permissions
 
 | Variable | Default | Masked | Description |
 |---|---|---|---|
-| `PUID` | `1000` | ❌ | User ID for file permissions |
-| `PGID` | `1000` | ❌ | Group ID for file permissions |
-| `UMASK` | `022` | ❌ | File creation mask |
+| `PUID` | `500` | ❌ | User ID for file permissions |
+| `PGID` | `500` | ❌ | Group ID for file permissions |
 
 ---
 
