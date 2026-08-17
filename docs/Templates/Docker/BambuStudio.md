@@ -5,9 +5,10 @@ parent: Docker Templates
 nav_order: 5
 ---
 
-# BambuStudio
+# 🖨️ BambuStudio
 
-{: .note }
+<img src="https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/bambustudio.png" width="80" />
+
 Bambu Studio is an open-source, cutting-edge, feature-rich slicing software for Bambu Lab 3D printers. It contains project-based workflows, systematically optimized slicing algorithms, and an easy-to-use graphical interface, bringing users an incredibly smooth printing experience.
 
 ## 📋 Quick Info
