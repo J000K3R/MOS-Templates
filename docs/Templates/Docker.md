@@ -23,6 +23,7 @@ Each template can be installed directly from the MOS Hub with a single click.
 | 🔐 **Authentik Server** | Open-source Identity Provider with SSO support | [📖 Guide](Docker/Authentik_Server.html) |
 | ⚙️ **Authentik Worker** | Background task processor for Authentik | [📖 Guide](Docker/Authentik_Worker.html) |
 | 🪶 **Apache Tika** | Document metadata & text extraction toolkit | [📖 Guide](Docker/Apache_Tika.html) |
+| 📚 **BambuStudio** | Bambu Lab 3D printer slicing software | [📖 Guide](Docker/BambuStudio.html) |
 | 📚 **Bazarr** | Subtitle manager for Sonarr/Radarr/Lidarr | [📖 Guide](Docker/Bazarr.html) |
 | 📚 **BookStack** | Self-hosted wiki & documentation platform | [📖 Guide](Docker/BookStack.html) |
 | 📊 **Calibre** | E-book manager & converter | [📖 Guide](Docker/Calibre.html) |
