@@ -35,6 +35,20 @@
   ],
   "variables": [
     {
+      "name": "PUID",
+      "key": "PUID",
+      "value": "500",
+      "mask": false,
+      "description": "User ID for file permissions."
+    },
+    {
+      "name": "PGID",
+      "key": "PGID",
+      "value": "500",
+      "mask": false,
+      "description": "Group ID for file permissions."
+    },
+    {
       "name": "TZ",
       "key": "TZ",
       "value": "Europe/Vienna",
