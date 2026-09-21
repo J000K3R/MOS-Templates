@@ -24,6 +24,8 @@ Each template can be installed directly from the MOS Hub with a single click.
 | ⚙️ **Authentik Worker** | Background task processor for Authentik | [📖 Guide](Docker/Authentik_Worker.html) |
 | 🪶 **Apache Tika** | Document metadata & text extraction toolkit | [📖 Guide](Docker/Apache_Tika.html) |
 | 📚 **Bazarr** | Subtitle manager for Sonarr/Radarr/Lidarr | [📖 Guide](Docker/Bazarr.html) |
+| 📊 **Beszel-Agent** | Server monitoring agent for Beszel | [📖 Guide](Docker/Beszel-Agent.html) |
+| 📊 **Beszel-Hub** | Server monitoring hub | [📖 Guide](Docker/Beszel-Hub.html) |
 | 📚 **BookStack** | Self-hosted wiki & documentation platform | [📖 Guide](Docker/BookStack.html) |
 | 📊 **Calibre** | E-book manager & converter | [📖 Guide](Docker/Calibre.html) |
 | 📚 **Calibre-Web** | Web interface for Calibre library | [📖 Guide](Docker/Calibre-Web.html) |
@@ -53,9 +55,9 @@ Each template can be installed directly from the MOS Hub with a single click.
 | 🐳 **Portainer-Agent** | Docker agent for Portainer | [📖 Guide](Docker/Portainer-Agent.html) |
 | 📡 **Prowlarr** | Indexer manager for Sonarr/Radarr/Lidarr | [📖 Guide](Docker/Prowlarr.html) |
 | 🎬 **Seerr** | Media request manager for Jellyfin, Plex & Emby | [📖 Guide](Docker/Seerr.html) |
+| 🏅 **Sportarr** | Sports automation tool | [📖 Guide](Docker/Sportarr.html) |
+| 📊 **Tautulli** | Plex Media Server monitoring & analytics | [📖 Guide](Docker/Tautulli.html) |
 | 📊 **Tracearr** | Stream monitoring & analytics for media servers | [📖 Guide](Docker/Tracearr.html) |
-| 📊 **Beszel-Agent** | Server monitoring agent for Beszel | [📖 Guide](Docker/Beszel-Agent.html) |
-| 📊 **Beszel-Hub** | Server monitoring hub | [📖 Guide](Docker/Beszel-Hub.html) |
 | 🎞️ **Tdarr** | Automated media library management | [📖 Guide](Docker/Tdarr.html) |
 | 📊 **TimescaleDB** | Time-series database extension | [📖 Guide](Docker/TimescaleDB.html) |
 | 🎮 **Twitch-Drops-Miner** | Auto-claim Twitch drops | [📖 Guide](Docker/Twitch-Drops-Miner.html) |
