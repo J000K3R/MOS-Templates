@@ -24,7 +24,22 @@
             "description": "Gluetun configuration and helper scripts."
         }
     ],
-    "ports": [],
+    "ports": [
+       {
+            "name": "HTTP proxy",
+            "protocol": "tcp",
+            "host": "8888",
+            "container": "8888",
+            "description": "HTTP proxy"
+        },
+        {
+            "name": "SOCKS5",
+            "protocol": "tcp",
+            "host": "1080",
+            "container": "1080",
+            "description": "SOCKS5 proxy"
+        }
+    ],
     "variables": [
         {
             "name": "VPN Provider",
