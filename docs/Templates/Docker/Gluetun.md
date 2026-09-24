@@ -30,7 +30,14 @@ nav_order: 23.5
 
 ## 🌐 Ports
 
-No ports of their own — Gluetun is a **gateway**, not a service. Instead, **route other containers through it** (see *Usage* below). If your media apps need a port reachable from the LAN while going through the VPN (e.g. a torrent WebUI), expose those ports on Gluetun instead.
+Gluetun is a **gateway**, not a service — the real benefit comes from **routing other containers through it** (see *Usage* below). It does, however, expose proxy ports you can reach from the LAN or from routed apps:
+
+| Port | Protocol | Purpose |
+|---|---|---|
+| `8888` | TCP | HTTP proxy |
+| `1080` | TCP | SOCKS5 proxy |
+
+> 💡 If a media app needs a port reachable from the LAN while going through the VPN (e.g. a torrent WebUI), expose that port on Gluetun instead of on the app itself.
 
 ---
 
