@@ -36,6 +36,7 @@ Each template can be installed directly from the MOS Hub with a single click.
 | 🪵 **Dozzle** | Real-time Docker log viewer | [📖 Guide](Docker/Dozzle.html) |
 | 💬 **Element Web** | Matrix web client for self-hosted chat | [📖 Guide](Docker/Element_Web.html) |
 | 🎮 **Free Games Claimer** | Auto-claim free games on Epic, Prime & GOG | [📖 Guide](Docker/Free_Games_Claimer.html) |
+| 🔐 **Gluetun** | VPN client in a container with kill switch | [📖 Guide](Docker/Gluetun.html) |
 | 📄 **Gotenberg** | API for converting documents to PDF | [📖 Guide](Docker/Gotenberg.html) |
 | 📊 **Grafana** | Analytics & monitoring dashboard | [📖 Guide](Docker/Grafana.html) |
 | 🦉 **Homepage** | Modern server dashboard | [📖 Guide](Docker/Homepage.html) |

@@ -1,0 +1,88 @@
+{
+    "name": "Gluetun",
+    "repo": "qmcgaw/gluetun:latest",
+    "network": "bridge",
+    "custom_ip": null,
+    "default_shell": "sh",
+    "privileged": false,
+    "extra_parameters": "--restart=unless-stopped --cap-add=NET_ADMIN",
+    "post_parameters": null,
+    "web_ui_url": "",
+    "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Gluetun.html",
+    "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/gluetun.png",
+    "category": [ "Network" ],
+    "project": "https://github.com/qmcgaw/gluetun",
+    "support": "https://github.com/qmcgaw/gluetun/issues",
+    "description": "VPN client in a thin Docker container for multiple providers (Mullvad, ProtonVPN, NordVPN, ExpressVPN and more) over WireGuard or OpenVPN. Includes a built-in kill switch and firewall: containers routed through Gluetun are automatically blocked when the tunnel drops. Ideal for routing torrents and other apps through a stable Mullvad WireGuard tunnel.",
+    "donate": "https://github.com/sponsors/qdm12",
+    "paths": [
+        {
+            "name": "GlueTun Config",
+            "mode": "rw",
+            "host": "/mnt/cache/appdata/gluetun",
+            "container": "/gluetun",
+            "description": "Gluetun configuration and helper scripts."
+        }
+    ],
+    "ports": [],
+    "variables": [
+        {
+            "name": "VPN Provider",
+            "key": "VPN_SERVICE_PROVIDER",
+            "value": "mullvad",
+            "mask": false,
+            "description": "VPN service provider. Supported: mullvad, protonvpn, nordvpn, expressvpn, private internet access, surfshark and more."
+        },
+        {
+            "name": "VPN Type",
+            "key": "VPN_TYPE",
+            "value": "wireguard",
+            "mask": false,
+            "description": "VPN protocol: wireguard or openvpn."
+        },
+        {
+            "name": "WireGuard Private Key",
+            "key": "WIREGUARD_PRIVATE_KEY",
+            "value": "",
+            "mask": true,
+            "description": "Your WireGuard private key (base64). Generate a Mullvad WireGuard config file and use its PrivateKey value. Same for all Mullvad servers."
+        },
+        {
+            "name": "WireGuard Addresses",
+            "key": "WIREGUARD_ADDRESSES",
+            "value": "",
+            "mask": false,
+            "description": "Your WireGuard IP address in CIDR format (e.g. 10.64.222.21/32). Use the IPv4 Address from your generated Mullvad config. Same for all Mullvad servers."
+        },
+        {
+            "name": "Server Countries",
+            "key": "SERVER_COUNTRIES",
+            "value": "Switzerland",
+            "mask": false,
+            "description": "Comma-separated list of countries to randomly connect to."
+        },
+        {
+            "name": "Server Cities",
+            "key": "SERVER_CITIES",
+            "value": "Zurich",
+            "mask": false,
+            "description": "Comma-separated list of cities to randomly connect to. Gluetun picks one at every container start."
+        },
+        {
+            "name": "Timezone",
+            "key": "TZ",
+            "value": "Europe/Vienna",
+            "mask": false,
+            "description": "Timezone for the container."
+        }
+    ],
+    "devices": [
+        {
+            "name": "TUN Device",
+            "host": "/dev/net/tun",
+            "container": "/dev/net/tun",
+            "description": "TUN device required for the VPN tunnel. Requires the NET_ADMIN capability (already added via extra_parameters)."
+        }
+    ],
+    "gpus": []
+}
