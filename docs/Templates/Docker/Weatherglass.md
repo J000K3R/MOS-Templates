@@ -68,7 +68,7 @@ Four example sensors are created on a fresh database, so there is something on t
 
 ## ⚠️ Notes
 
-**The `/data` folder has to belong to the container's user.** The image runs as UID 65532 — not as root and not as `PUID`. A bind mount takes the ownership of the **host** folder and not of the image, and the folder MOS creates on the appdata pool is not owned by 65532, so a first install can stop straight away with
+**The `/data` folder has to belong to the container's user.** The image runs as UID 500 — the same uid MOS gives the appdata folders it creates, and not root and not `PUID`. A bind mount takes the ownership of the **host** folder rather than of the image, so if that folder belongs to anybody else, a first install can stop straight away with
 
 ```
 weatherglass: ping database /data/weatherglass.db: unable to open database file (14)
@@ -77,16 +77,12 @@ weatherglass: ping database /data/weatherglass.db: unable to open database file 
 Hand the folder to the container's user once and install again. MOS rewrites the `/mnt/cache` prefix to your own appdata pool, so use the path it actually created:
 
 ```bash
-chown -R 65532:65532 /mnt/cache/appdata/weatherglass
+chown -R 500:500 /mnt/cache/appdata/weatherglass
 ```
 
-**This template points at the pre-release test image.** `ghcr.io/j000k3r/weatherglass:dev` is **private**, so the MOS machine has to be logged in to the registry once before the first install. A GitHub token with the `read:packages` scope is enough:
+A container started from this template on a folder MOS itself created needs none of that: both are 500.
 
-```bash
-echo YOUR_GITHUB_TOKEN | docker login ghcr.io -u J000K3R --password-stdin
-```
-
-Once Weatherglass is released, the image moves to `j000k3r/weatherglass:latest` on Docker Hub and this step disappears.
+**The image is public and needs no login.** `ghcr.io/j000k3r/weatherglass:dev` pulls anonymously, from the MOS machine like anywhere else — no registry account, no token, no `docker login`. There is no `latest` tag while the project is in development; `dev` is the current build, and `sha-<commit>` names one exactly. Version tags appear with the 0.1.0 release.
 
 **Ping sensors need `NET_RAW`.** It is already in the template. Without it Weatherglass falls back to an unprivileged UDP ping and says so in the sensor result; every other sensor type keeps working either way.
 
@@ -96,7 +92,7 @@ Once Weatherglass is released, the image moves to `j000k3r/weatherglass:latest` 
 -v /var/run/docker.sock:/var/run/docker.sock:ro
 ```
 
-**There is no `PUID`, `PGID` or `TZ` here, and that is deliberate.** The image runs as UID 65532 and the volume is created already owned by it, so there is nothing to set. And everything is stored in UTC while the dashboard renders timestamps in your browser's own timezone — a `TZ` variable would change nothing, so this image does not have one.
+**There is no `PUID`, `PGID` or `TZ` here, and that is deliberate.** The image runs as UID 500 — the uid MOS uses for appdata — and a volume created from the image is already owned by it, so there is nothing to set. And everything is stored in UTC while the dashboard renders timestamps in your browser's own timezone — a `TZ` variable would change nothing, so this image does not have one.
 
 **The container is distroless and has no shell**, so the MOS Hub console will not open. To look in on it from the host instead:
 
