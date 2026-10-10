@@ -68,7 +68,7 @@ Four example sensors are created on a fresh database, so there is something on t
 
 ## ⚠️ Notes
 
-**The `/data` folder has to belong to the container's user.** The image runs as UID 65532 — not as root and not as `PUID`. A bind mount takes the ownership of the **host** folder and not of the image, and the folder MOS creates on the appdata pool is not owned by 65532, so a first install stops straight away with
+**The `/data` folder has to belong to the container's user.** The image runs as UID 65532 — not as root and not as `PUID`. A bind mount takes the ownership of the **host** folder and not of the image, and the folder MOS creates on the appdata pool is not owned by 65532, so a first install can stop straight away with
 
 ```
 weatherglass: ping database /data/weatherglass.db: unable to open database file (14)
