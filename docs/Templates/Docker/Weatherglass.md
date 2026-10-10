@@ -50,7 +50,7 @@ One container, a few megabytes of RAM, and no agent to install on the machines i
 
 | Variable | Default | Masked | Description |
 |---|---|---|---|
-| `WEATHERGLASS_BASE_URL` | — | ❌ | The address you actually reach the dashboard on. Alert messages link back to it |
+| `WEATHERGLASS_BASE_URL` | *(empty)* | ❌ | Optional. The address you reach the dashboard on. Alert messages link back to it. Type it out in full — `[IP]` and `[PORT]` are **not** substituted here |
 | `WEATHERGLASS_LOG_LEVEL` | `info` | ❌ | `debug`, `info`, `warn` or `error` |
 | `WEATHERGLASS_ADMIN_PASSWORD` | *(empty)* | ✅ | Optional. Skips the setup screen on a fresh database; ignored once a password has been stored |
 
@@ -67,6 +67,18 @@ Four example sensors are created on a fresh database, so there is something on t
 ---
 
 ## ⚠️ Notes
+
+**The `/data` folder has to belong to the container's user.** The image runs as UID 65532 — not as root and not as `PUID`. A bind mount takes the ownership of the **host** folder and not of the image, and the folder MOS creates on the appdata pool is not owned by 65532, so a first install stops straight away with
+
+```
+weatherglass: ping database /data/weatherglass.db: unable to open database file (14)
+```
+
+Hand the folder to the container's user once and install again. MOS rewrites the `/mnt/cache` prefix to your own appdata pool, so use the path it actually created:
+
+```bash
+chown -R 65532:65532 /mnt/cache/appdata/weatherglass
+```
 
 **This template points at the pre-release test image.** `ghcr.io/j000k3r/weatherglass:dev` is **private**, so the MOS machine has to be logged in to the registry once before the first install. A GitHub token with the `read:packages` scope is enough:
 
