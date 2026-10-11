@@ -76,7 +76,7 @@ default applies, so the container runs on defaults with nothing set at all.
 2. Click **Install**
 3. Access ProbeGlass at `http://YOUR_SERVER_IP:8080` and choose the dashboard password
 
-Four example sensors are created on a fresh database, so there is something on the screen to look at. They can be removed again in one click under **Settings → Monitoring → Example data**.
+Four example sensors are created on a fresh database, at two example places, so there is something on the screen and on the map to look at. They can be removed again in one click under **Settings → Monitoring → Example data**.
 
 ---
 
