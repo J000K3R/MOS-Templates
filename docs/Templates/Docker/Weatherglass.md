@@ -82,6 +82,14 @@ chown -R 500:500 /mnt/cache/appdata/weatherglass
 
 A container started from this template on a folder MOS itself created needs none of that: both are 500.
 
+**Want a different uid? Override it where it is decided.** Not with an environment variable — the runtime resolves the user before the process starts, and a process reads its environment only once it is already running as that user, so a `WEATHERGLASS_UID` would look like it worked and quietly do nothing. Add `--user=1000:1000` to the template's **Extra Parameters** (or `user: "1000:1000"` in a compose file) and give `/data` to that same uid; the two have to agree.
+
+```bash
+chown -R 1000:1000 /mnt/cache/appdata/weatherglass
+```
+
+The container says which two uids have to agree when they do not — `docker exec weatherglass /usr/local/bin/weatherglass doctor` reports the uid it is asking as, the uid the image expects, and names both switches.
+
 **The image is public and needs no login.** `ghcr.io/j000k3r/weatherglass:dev` pulls anonymously, from the MOS machine like anywhere else — no registry account, no token, no `docker login`. There is no `latest` tag while the project is in development; `dev` is the current build, and `sha-<commit>` names one exactly. Version tags appear with the 0.1.0 release.
 
 **Ping sensors need `NET_RAW`.** It is already in the template. Without it Weatherglass falls back to an unprivileged UDP ping and says so in the sensor result; every other sensor type keeps working either way.
