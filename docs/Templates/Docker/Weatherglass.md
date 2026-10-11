@@ -50,9 +50,23 @@ One container, a few megabytes of RAM, and no agent to install on the machines i
 
 | Variable | Default | Masked | Description |
 |---|---|---|---|
-| `WEATHERGLASS_BASE_URL` | *(empty)* | ❌ | Optional. The address you reach the dashboard on. Alert messages link back to it. Type it out in full — `[IP]` and `[PORT]` are **not** substituted here |
+| `PUID` | `500` | ❌ | User ID the container runs as. It starts as root, hands `/data` to this user and then becomes it, so the appdata folder never has to be prepared by hand |
+| `PGID` | `500` | ❌ | Group ID for the same. See `PUID` |
+| `UMASK` | `022` | ❌ | File creation mask for new files, in octal |
+| `WEATHERGLASS_DATA_DIR` | `/data` | ❌ | Optional. The directory the database lives in — the path the volume above is mounted at |
+| `WEATHERGLASS_DB` | *(empty)* | ❌ | Optional. Full path to the SQLite file; empty means `<data dir>/weatherglass.db` |
+| `WEATHERGLASS_LISTEN` | `:8080` | ❌ | Optional. `host:port` to serve on. Has to match the port mapping |
 | `WEATHERGLASS_LOG_LEVEL` | `info` | ❌ | `debug`, `info`, `warn` or `error` |
+| `WEATHERGLASS_LOG_FORMAT` | `text` | ❌ | Optional. `text` or `json` |
+| `WEATHERGLASS_TRUST_PROXY` | `false` | ❌ | Optional. `true` only behind a reverse proxy you control: it makes the daemon believe `X-Forwarded-For` and `X-Forwarded-Proto` |
+| `WEATHERGLASS_RETENTION_RAW` | `7d` | ❌ | Optional. How long raw probes are kept. `30s`, `5m`, `2h`, `7d`, `2w`, or a number of seconds |
+| `WEATHERGLASS_RETENTION_HOURLY` | `90d` | ❌ | Optional. How long the hourly rollups behind the long-range graphs are kept |
+| `WEATHERGLASS_BASE_URL` | *(empty)* | ❌ | Optional. The address you reach the dashboard on. Alert messages link back to it. Type it out in full — `[IP]` and `[PORT]` are **not** substituted here |
 | `WEATHERGLASS_ADMIN_PASSWORD` | *(empty)* | ✅ | Optional. Skips the setup screen on a fresh database; ignored once a password has been stored |
+| `WEATHERGLASS_CONFIG` | *(empty)* | ❌ | Optional. Path to a YAML file declaring sensors and channels. If you set it, the file has to exist or the daemon refuses to start; empty means `<data dir>/weatherglass.yaml` when that file is there |
+
+Every one of them is optional: a value that is left empty is ignored and the built-in
+default applies, so the container runs on defaults with nothing set at all.
 
 ---
 
@@ -68,27 +82,35 @@ Four example sensors are created on a fresh database, so there is something on t
 
 ## ⚠️ Notes
 
-**The `/data` folder has to belong to the container's user.** The image runs as UID 500 — the same uid MOS gives the appdata folders it creates, and not root and not `PUID`. A bind mount takes the ownership of the **host** folder rather than of the image, so if that folder belongs to anybody else, a first install can stop straight away with
+**The `/data` folder is taken over by the container, so nothing has to be chowned by hand.** The MOS Hub creates the appdata folder itself, as root, and a bind mount keeps that ownership — a container that started as UID 500 could not write into it and could not repair it either. So this image starts as **root**, gives `/data` and everything inside it to **`PUID:PGID`** — `500:500` by default — and only then runs as that user, before the database is opened. That is how the other images on MOS do it, and it is why installing Weatherglass on a fresh appdata folder now works without touching a shell.
+
+**Want a different uid? Set `PUID` and `PGID` in the template.** They are variables in this template's Environment section and take effect on the next start; the daemon logs the `uid` and `gid` it ended up as, so `docker logs weatherglass` is the proof. `PUID=0` keeps the container as root, which works and is not recommended. The three only apply while the container still starts as root — with `--user` in **Extra Parameters** the process is not root, cannot claim the folder and says so in one log line instead of silently ignoring them.
+
+If a start still fails on the directory, the log now says which of the two it is:
 
 ```
-weatherglass: ping database /data/weatherglass.db: unable to open database file (14)
+weatherglass: ping database /data/weatherglass.db: unable to open database file (14); /data is
+not writable by uid 500, the user this process runs as. In a container the daemon starts as
+root, takes the data directory over and then drops to PUID:PGID, so this means it did not start
+as root — drop --user, or set PUID and PGID to whoever owns the folder, or hand it over
+yourself: chown -R 500:500 <host folder>
 ```
 
-Hand the folder to the container's user once and install again. MOS rewrites the `/mnt/cache` prefix to your own appdata pool, so use the path it actually created:
+The other message, `not writable even as root`, means the mount itself is not taking writes — a read-only mount or a full disk — and no `chown` will change that.
+
+MOS rewrites the `/mnt/cache` prefix to your own appdata pool, so if you are working from the host, use the path it actually created:
 
 ```bash
 chown -R 500:500 /mnt/cache/appdata/weatherglass
 ```
 
-A container started from this template on a folder MOS itself created needs none of that: both are 500.
+**What the root moment means.** It lasts a few milliseconds, before any file is opened and before the port is bound, and it is permanent once it is over: a privileged `setuid` cannot be undone, and Go applies it to every thread. A container running from this template never touches the appdata folder by hand again after that first start. The full account is in [SECURITY.md](https://github.com/j000k3r/weatherglass/blob/main/SECURITY.md) and in the [security concept](https://j000k3r.github.io/weatherglass-docs/concepts/security#privileges).
 
-**Want a different uid? Override it where it is decided.** Not with an environment variable — the runtime resolves the user before the process starts, and a process reads its environment only once it is already running as that user, so a `WEATHERGLASS_UID` would look like it worked and quietly do nothing. Add `--user=1000:1000` to the template's **Extra Parameters** (or `user: "1000:1000"` in a compose file) and give `/data` to that same uid; the two have to agree.
+`doctor` is worth knowing when something is off, and it has to be run as the daemon's user to be meaningful — `docker exec` starts a new process as root:
 
 ```bash
-chown -R 1000:1000 /mnt/cache/appdata/weatherglass
+docker exec -u 500:500 weatherglass /usr/local/bin/weatherglass doctor
 ```
-
-The container says which two uids have to agree when they do not — `docker exec weatherglass /usr/local/bin/weatherglass doctor` reports the uid it is asking as, the uid the image expects, and names both switches.
 
 **The image is public and needs no login.** `ghcr.io/j000k3r/weatherglass:dev` pulls anonymously, from the MOS machine like anywhere else — no registry account, no token, no `docker login`. There is no `latest` tag while the project is in development; `dev` is the current build, and `sha-<commit>` names one exactly. Version tags appear with the 0.1.0 release.
 
@@ -100,7 +122,9 @@ The container says which two uids have to agree when they do not — `docker exe
 -v /var/run/docker.sock:/var/run/docker.sock:ro
 ```
 
-**There is no `PUID`, `PGID` or `TZ` here, and that is deliberate.** The image runs as UID 500 — the uid MOS uses for appdata — and a volume created from the image is already owned by it, so there is nothing to set. And everything is stored in UTC while the dashboard renders timestamps in your browser's own timezone — a `TZ` variable would change nothing, so this image does not have one.
+**There is no `TZ` here, and that is deliberate.** Everything is stored in UTC while the dashboard renders timestamps in your browser's own timezone, so a `TZ` variable would change nothing and this image does not have one.
+
+**`PUID` and `PGID` exist and do something**, unlike a `TZ` that would not: they decide which user the container becomes after it has taken `/data` over. `500:500` is the default and the right answer almost always — it is the uid the other templates on MOS run their containers as, so the files Weatherglass writes look like every other file in appdata. Change it only when the volume points somewhere that something else owns.
 
 **The container is distroless and has no shell**, so the MOS Hub console will not open. To look in on it from the host instead:
 
