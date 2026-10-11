@@ -1,6 +1,6 @@
 {
-  "name": "Weatherglass",
-  "repo": "ghcr.io/j000k3r/weatherglass:dev",
+  "name": "ProbeGlass",
+  "repo": "ghcr.io/j000k3r/probeglass:dev",
   "network": "bridge",
   "custom_ip": null,
   "default_shell": "sh",
@@ -8,19 +8,19 @@
   "extra_parameters": "--restart=unless-stopped --cap-add=NET_RAW",
   "post_parameters": null,
   "web_ui_url": "http://[IP]:[PORT:8080]/",
-  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Weatherglass.html",
-  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/weatherglass.png",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/ProbeGlass.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/probeglass.png",
   "category": [ "Monitoring" ],
-  "project": "https://github.com/j000k3r/weatherglass",
-  "support": "https://github.com/j000k3r/weatherglass/issues",
-  "description": "Weatherglass is a small self-hosted watchdog for your homelab. It probes your services on a schedule, keeps their history in a single SQLite file, draws the graphs, and tells you when something breaks. Sensors for HTTP, TCP, TLS certificates, ping, DNS, Docker containers and SNMP; alerts over Telegram, Matrix, ntfy, Slack, Discord or a webhook.",
+  "project": "https://github.com/j000k3r/probeglass",
+  "support": "https://github.com/j000k3r/probeglass/issues",
+  "description": "ProbeGlass is a small self-hosted watchdog for your homelab. It probes your services on a schedule, keeps their history in a single SQLite file, draws the graphs, and tells you when something breaks. Sensors for HTTP, TCP, TLS certificates, ping, DNS, Docker containers and SNMP; alerts over Telegram, Matrix, ntfy, Slack, Discord or a webhook.",
   "paths": [
     {
       "name": "Appdata",
       "mode": "rw",
-      "host": "/mnt/cache/appdata/weatherglass",
+      "host": "/mnt/cache/appdata/probeglass",
       "container": "/data",
-      "description": "SQLite database, its write-ahead log, and weatherglass.yaml. The container takes the folder over on start, so it does not have to be prepared by hand."
+      "description": "SQLite database, its write-ahead log, and probeglass.yaml. The container takes the folder over on start, so it does not have to be prepared by hand."
     }
   ],
   "ports": [
@@ -29,7 +29,7 @@
       "protocol": "tcp",
       "host": "8080",
       "container": "8080",
-      "description": "Weatherglass web interface and dashboard."
+      "description": "ProbeGlass web interface and dashboard."
     }
   ],
   "variables": [
@@ -56,80 +56,80 @@
     },
     {
       "name": "Data Directory",
-      "key": "WEATHERGLASS_DATA_DIR",
+      "key": "PROBEGLASS_DATA_DIR",
       "value": "/data",
       "mask": false,
       "description": "Optional. Directory holding the database. This is the path the Appdata entry above is mounted at; change it only if you change that mount."
     },
     {
       "name": "Database Path",
-      "key": "WEATHERGLASS_DB",
+      "key": "PROBEGLASS_DB",
       "value": "",
       "mask": false,
-      "description": "Optional. Full path to the SQLite file. Empty means <data directory>/weatherglass.db, which is almost always what you want."
+      "description": "Optional. Full path to the SQLite file. Empty means <data directory>/probeglass.db, which is almost always what you want."
     },
     {
       "name": "Listen Address",
-      "key": "WEATHERGLASS_LISTEN",
+      "key": "PROBEGLASS_LISTEN",
       "value": ":8080",
       "mask": false,
       "description": "Optional. host:port the dashboard and the API are served on. Has to match the port mapping above."
     },
     {
       "name": "Log Level",
-      "key": "WEATHERGLASS_LOG_LEVEL",
+      "key": "PROBEGLASS_LOG_LEVEL",
       "value": "info",
       "mask": false,
       "description": "debug, info, warn or error."
     },
     {
       "name": "Log Format",
-      "key": "WEATHERGLASS_LOG_FORMAT",
+      "key": "PROBEGLASS_LOG_FORMAT",
       "value": "text",
       "mask": false,
       "description": "Optional. text for reading along, json for a log collector."
     },
     {
       "name": "Trust Proxy Headers",
-      "key": "WEATHERGLASS_TRUST_PROXY",
+      "key": "PROBEGLASS_TRUST_PROXY",
       "value": "false",
       "mask": false,
       "description": "Optional. Set to true only when a reverse proxy you control sits in front of it: it makes the daemon believe X-Forwarded-For and X-Forwarded-Proto. Without a proxy in front, that lets a client pick the address it appears to come from."
     },
     {
       "name": "Retention: Raw",
-      "key": "WEATHERGLASS_RETENTION_RAW",
+      "key": "PROBEGLASS_RETENTION_RAW",
       "value": "7d",
       "mask": false,
       "description": "Optional. How long raw probes are kept. Accepts 30s, 5m, 2h, 7d, 2w, or a bare number of seconds."
     },
     {
       "name": "Retention: Hourly",
-      "key": "WEATHERGLASS_RETENTION_HOURLY",
+      "key": "PROBEGLASS_RETENTION_HOURLY",
       "value": "90d",
       "mask": false,
       "description": "Optional. How long the hourly rollups behind the long-range graphs are kept."
     },
     {
       "name": "Base URL",
-      "key": "WEATHERGLASS_BASE_URL",
+      "key": "PROBEGLASS_BASE_URL",
       "value": "",
       "mask": false,
       "description": "Optional. The address you reach the dashboard on, e.g. http://192.168.1.10:8080. Alert messages link back to it; empty means no link is added. Type it out in full — [IP] and [PORT] are not substituted here."
     },
     {
       "name": "Admin Password",
-      "key": "WEATHERGLASS_ADMIN_PASSWORD",
+      "key": "PROBEGLASS_ADMIN_PASSWORD",
       "value": "",
       "mask": true,
       "description": "Optional. Skips the setup screen on a fresh database; ignored once a password has been stored."
     },
     {
       "name": "Configuration File",
-      "key": "WEATHERGLASS_CONFIG",
+      "key": "PROBEGLASS_CONFIG",
       "value": "",
       "mask": false,
-      "description": "Optional. Path to a YAML file declaring sensors and channels. Careful: if this is set, the file has to exist or the daemon refuses to start. Empty means <data directory>/weatherglass.yaml is used when it is there."
+      "description": "Optional. Path to a YAML file declaring sensors and channels. Careful: if this is set, the file has to exist or the daemon refuses to start. Empty means <data directory>/probeglass.yaml is used when it is there."
     }
   ],
   "devices": [],
