@@ -76,7 +76,7 @@ default applies, so the container runs on defaults with nothing set at all.
 2. Click **Install**
 3. Access ProbeGlass at `http://YOUR_SERVER_IP:8080` and choose the dashboard password
 
-Four example sensors are created on a fresh database, at two example places, so there is something on the screen and on the map to look at. They can be removed again in one click under **Settings → Monitoring → Example data**.
+Thirteen example sensors are created on a fresh database, at three example places, so there is something on the screen and on the map to look at — one place with everything answering, one that is a homelab's own addresses and paused, and one with an outage on it, so the map shows a pin in each of its three colours. They can be removed again in one click under **Settings → Monitoring → Example data**.
 
 ---
 
