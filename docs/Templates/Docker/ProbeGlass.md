@@ -16,7 +16,7 @@ One container, a few megabytes of RAM, and no agent to install on the machines i
 
 🏷️ **Category:** Monitoring
 
-🐳 **Image:** `ghcr.io/j000k3r/probeglass:dev`
+🐳 **Image:** `ghcr.io/j000k3r/probeglass:0.1.0`
 
 ---
 
@@ -112,7 +112,7 @@ chown -R 500:500 /mnt/cache/appdata/probeglass
 docker exec -u 500:500 probeglass /usr/local/bin/probeglass doctor
 ```
 
-**The image is public and needs no login.** `ghcr.io/j000k3r/probeglass:dev` pulls anonymously, from the MOS machine like anywhere else — no registry account, no token, no `docker login`. There is no `latest` tag while the project is in development; `dev` is the current build, and `sha-<commit>` names one exactly. Version tags appear with the 0.1.0 release.
+**The image is public and needs no login.** `ghcr.io/j000k3r/probeglass:0.1.0` pulls anonymously, from the MOS machine like anywhere else — no registry account, no token, no `docker login`. `0.1.0` is the exact version and never changes under you; `0.1` follows its patch releases and `latest` the newest release of all, while `sha-<commit>` names one build exactly and `dev` whatever is in the tree today.
 
 **Ping sensors need `NET_RAW`.** It is already in the template. Without it ProbeGlass falls back to an unprivileged UDP ping and says so in the sensor result; every other sensor type keeps working either way.
 
