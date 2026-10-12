@@ -112,7 +112,7 @@ chown -R 500:500 /mnt/cache/appdata/probeglass
 docker exec -u 500:500 probeglass /usr/local/bin/probeglass doctor
 ```
 
-**The image is public and needs no login.** `ghcr.io/j000k3r/probeglass:latest` pulls anonymously, from the MOS machine like anywhere else — no registry account, no token, no `docker login`. `latest` is the newest release and only ever a release: a tagged pre-release is excluded from it, so no candidate build reaches the Hub. It is also the tag this collection uses almost everywhere else — 45 of its 56 container templates — so an installed app and this template agree on what they are running.
+**The image is public and needs no login.** `ghcr.io/j000k3r/probeglass:latest` pulls anonymously, from the MOS machine like anywhere else — no registry account, no token, no `docker login`. `latest` is the newest release and only ever a release: a tagged pre-release is excluded from it, so no candidate build reaches the Hub. It is also the tag this collection uses almost everywhere; a pinned version is the exception here, not the rule.
 
 Pin an exact version instead if you would rather it never moved under you. `0.1.0` is the version as released, `0.1` follows its patch releases, and `sha-<commit>` names one build exactly. All of them are on the same public package page, `ghcr.io/j000k3r/probeglass`. Development builds of whatever is in the tree today live under `dev` and are not what this template installs.
 
