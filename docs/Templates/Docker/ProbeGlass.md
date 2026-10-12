@@ -16,7 +16,7 @@ One container, a few megabytes of RAM, and no agent to install on the machines i
 
 🏷️ **Category:** Monitoring
 
-🐳 **Image:** `ghcr.io/j000k3r/probeglass:0.1.0`
+🐳 **Image:** `ghcr.io/j000k3r/probeglass:latest`
 
 ---
 
@@ -112,7 +112,9 @@ chown -R 500:500 /mnt/cache/appdata/probeglass
 docker exec -u 500:500 probeglass /usr/local/bin/probeglass doctor
 ```
 
-**The image is public and needs no login.** `ghcr.io/j000k3r/probeglass:0.1.0` pulls anonymously, from the MOS machine like anywhere else — no registry account, no token, no `docker login`. `0.1.0` is the exact version and never changes under you; `0.1` follows its patch releases and `latest` the newest release of all, while `sha-<commit>` names one build exactly and `dev` whatever is in the tree today.
+**The image is public and needs no login.** `ghcr.io/j000k3r/probeglass:latest` pulls anonymously, from the MOS machine like anywhere else — no registry account, no token, no `docker login`. `latest` is the newest release and only ever a release: a tagged pre-release is excluded from it, so no candidate build reaches the Hub. It is also the tag this collection uses almost everywhere else — 45 of its 56 container templates — so an installed app and this template agree on what they are running.
+
+Pin an exact version instead if you would rather it never moved under you. `0.1.0` is the version as released, `0.1` follows its patch releases, and `sha-<commit>` names one build exactly. All of them are on the same public package page, `ghcr.io/j000k3r/probeglass`. Development builds of whatever is in the tree today live under `dev` and are not what this template installs.
 
 **Ping sensors need `NET_RAW`.** It is already in the template. Without it ProbeGlass falls back to an unprivileged UDP ping and says so in the sensor result; every other sensor type keeps working either way.
 

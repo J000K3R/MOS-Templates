@@ -1,6 +1,6 @@
 {
   "name": "ProbeGlass",
-  "repo": "ghcr.io/j000k3r/probeglass:dev",
+  "repo": "ghcr.io/j000k3r/probeglass:latest",
   "network": "bridge",
   "custom_ip": null,
   "default_shell": "sh",
