@@ -116,6 +116,8 @@ docker exec -u 500:500 probeglass /usr/local/bin/probeglass doctor
 
 Pin an exact version instead if you would rather it never moved under you. `0.2.1` is the version as released, `0.2` follows its patch releases, and `sha-<commit>` names one build exactly. All of them are on the same public package page, `ghcr.io/j000k3r/probeglass`.
 
+**Which build am I running?** **Settings → Help and maintenance → About** has a **Channel** row at the top: `release` for a published version, `dev` for a build of the branch under development, `local` for one built from a working tree. Docker does not tell a container which tag it was pulled by, so two containers on one machine — one on `latest` and one on `dev` — are identical from the inside, down to the commit whenever both follow the same push. That row is what tells them apart.
+
 **Trying what is not released yet.** `ghcr.io/j000k3r/probeglass:dev` is rebuilt on every push to the project's `main`, so it carries whatever landed since the last release. Put that tag in the template's image field for a container that follows the work in progress, and change it back to `latest` when you want to stop. It is not a release and not supported, but it is a real build of the real tree, and `probeglass version` inside it says which one — `0.2.1-4-g9c1f0ab`, meaning four commits past 0.2.1. The same builds are published under `sha-<commit>`, which is the tag to quote if one of them turns out to be the one that broke something.
 
 **Ping sensors need `NET_RAW`.** It is already in the template. Without it ProbeGlass falls back to an unprivileged UDP ping and says so in the sensor result; every other sensor type keeps working either way.
