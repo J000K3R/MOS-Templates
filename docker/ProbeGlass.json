@@ -13,7 +13,7 @@
   "category": [ "Monitoring" ],
   "project": "https://github.com/j000k3r/probeglass",
   "support": "https://github.com/j000k3r/probeglass/issues",
-  "description": "ProbeGlass is a small self-hosted watchdog for your homelab. It probes your services on a schedule, keeps their history in a single SQLite file, draws the graphs, and tells you when something breaks. Sensors for HTTP, TCP, TLS certificates, ping, DNS, Docker containers and SNMP; alerts over Telegram, Matrix, ntfy, Slack, Discord or a webhook.",
+  "description": "ProbeGlass is a small self-hosted watchdog for your homelab. It probes your services on a schedule, keeps their history in a single SQLite file, draws the graphs, and tells you when something breaks. Sensors for HTTP, TCP, TLS certificates, ping, DNS, Docker containers and SNMP; alerts over Telegram, Matrix, ntfy, Gotify, Slack, Discord or a webhook.",
   "paths": [
     {
       "name": "Appdata",
