@@ -72,11 +72,11 @@ TS6 yet. Do not expect stability guarantees from a production standpoint.
 
 ## 🚀 Quick Start
   ├─ 1️⃣ Create the data directory — before installing
-  |   ```bash
-  |   mkdir -p /mnt/cache/appdata/teamspeak6
-  |   chown -R 9987:9987 /mnt/cache/appdata/teamspeak6
-  |   chmod 755 /mnt/cache/appdata/teamspeak6
-  |   ```
+     ```bash
+     mkdir -p /mnt/cache/appdata/teamspeak6
+     chown -R 9987:9987 /mnt/cache/appdata/teamspeak6
+     chmod 755 /mnt/cache/appdata/teamspeak6
+     ```
   ├─ 2️⃣ Set the correct ownership
   ├─ 3️⃣ Install from the MOS Hub
   └─ 4️⃣ Check it came up
