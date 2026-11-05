@@ -58,6 +58,7 @@ Each template can be installed directly from the MOS Hub with a single click.
 | 🎬 **Seerr** | Media request manager for Jellyfin, Plex & Emby | [📖 Guide](Docker/Seerr.html) |
 | 🏅 **Sportarr** | Sports automation tool | [📖 Guide](Docker/Sportarr.html) |
 | 📊 **Tautulli** | Plex Media Server monitoring & analytics | [📖 Guide](Docker/Tautulli.html) |
+| 🎙️ **TeamSpeak 6** | Next-generation voice server (beta) | [📖 Guide](Docker/Teamspeak6.html) |
 | 📊 **Tracearr** | Stream monitoring & analytics for media servers | [📖 Guide](Docker/Tracearr.html) |
 | 🎞️ **Tdarr** | Automated media library management | [📖 Guide](Docker/Tdarr.html) |
 | 📊 **TimescaleDB** | Time-series database extension | [📖 Guide](Docker/TimescaleDB.html) |
