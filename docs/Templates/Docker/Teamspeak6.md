@@ -71,15 +71,20 @@ TS6 yet. Do not expect stability guarantees from a production standpoint.
 ---
 
 ## 🚀 Quick Start
+  ├─ 1️⃣ Create the data directory — before installing
+  |   ```bash
+  |   mkdir -p /mnt/cache/appdata/teamspeak6
+  |   chown -R 9987:9987 /mnt/cache/appdata/teamspeak6
+  |   chmod 755 /mnt/cache/appdata/teamspeak6
+  |   ```
+  ├─ 2️⃣ Set the correct ownership
+  ├─ 3️⃣ Install from the MOS Hub
+  └─ 4️⃣ Check it came up
 
-1. Open the **MOS Hub** and search for **TeamSpeak 6**
-2. Leave `TSSERVER_LICENSE_ACCEPTED` at `accept`
-3. Click **Install**
-4. Open the container log — the **ServerAdmin privilege key** is printed there on
-   first run. Copy it before creating anything else
-5. Connect with a TS3 client (3.6.0+) or the TS6 client and enter the key
-6. Forward UDP `9987` and TCP `30033` in your router if the server should be
-   reachable from the internet
+## 🩺 Troubleshooting
+  ├─ Failed to create log directory …
+  └─ ServerAdmin key
+
 
 ---
 
