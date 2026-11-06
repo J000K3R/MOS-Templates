@@ -41,6 +41,7 @@ Each template can be installed directly from the MOS Hub with a single click.
 | 📊 **Grafana** | Analytics & monitoring dashboard | [📖 Guide](Docker/Grafana.html) |
 | 🦉 **Homepage** | Modern server dashboard | [📖 Guide](Docker/Homepage.html) |
 | 🏠 **Homarr** | Sleek dashboard for all your self-hosted apps | [📖 Guide](Docker/Homarr.html) |
+| 🛡️ **Ketesa** | Admin UI for Matrix/Synapse homeservers (formerly Synapse Admin) | [📖 Guide](Docker/Ketesa.html) |
 | 🦉 **KitchenOwl** | Smart grocery list & recipe manager | [📖 Guide](Docker/KitchenOwl.html) |
 | 🗂️ **Krusader** | Twin-panel file manager in the browser | [📖 Guide](Docker/Krusader.html) |
 | 📊 **InfluxDB** | Time-series database | [📖 Guide](Docker/InfluxDB.html) |
