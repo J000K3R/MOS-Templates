@@ -1,0 +1,131 @@
+{
+  "name": "TS6-Manager-Backend",
+  "repo": "clusterzx/ts6-manager:backend",
+  "network": "bridge",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped --add-host=ts6-sidecar:host-gateway",
+  "post_parameters": "",
+  "web_ui_url": "",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/TS6-Manager.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/ts6-manager.png",
+  "category": [ "Game Server" ],
+  "project": "https://github.com/clusterzx/ts6-manager",
+  "support": "https://github.com/clusterzx/ts6-manager/issues",
+  "description": "TS6 Manager Backend - Express API of the TS6 Manager stack (web management for TeamSpeak via WebQuery HTTP, music bots, bot flows, server widgets). STACK: Requires TS6-Manager-Frontend (web UI) and TS6-Manager-Sidecar (video streaming). Install Sidecar first, then Backend, then Frontend. REQUIRED: Set JWT_SECRET to a random value of at least 32 characters - the backend refuses to start without it. Generate one with: openssl rand -base64 32",
+  "donate": "",
+  "paths": [
+    {
+      "name": "Data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/ts6-manager/data",
+      "container": "/app/packages/backend/data",
+      "description": "SQLite database (users, server connections, bots, flows, widgets) and the YouTube cookie file uploaded in the UI."
+    },
+    {
+      "name": "Music",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/ts6-manager/music",
+      "container": "/data/music",
+      "description": "Music library: uploaded files and tracks downloaded via yt-dlp."
+    }
+  ],
+  "ports": [
+    {
+      "name": "API",
+      "protocol": "tcp",
+      "host": "3001",
+      "container": "3001",
+      "description": "Backend API and WebSocket. The frontend reaches it through this host port - keep it closed to the internet."
+    }
+  ],
+  "variables": [
+    {
+      "name": "JWT secret",
+      "key": "JWT_SECRET",
+      "value": "",
+      "mask": true,
+      "description": "REQUIRED. Random secret (min. 32 characters) for signing login tokens. Generate with: openssl rand -base64 32"
+    },
+    {
+      "name": "Encryption key",
+      "key": "ENCRYPTION_KEY",
+      "value": "",
+      "mask": true,
+      "description": "Recommended. Key for AES-256-GCM encryption of stored API keys and SSH passwords. Falls back to JWT_SECRET if empty. Do not change it later - stored credentials can no longer be decrypted."
+    },
+    {
+      "name": "Frontend URL",
+      "key": "FRONTEND_URL",
+      "value": "http://YOUR-SERVER-IP:3000",
+      "mask": false,
+      "description": "URL you open the web UI with. Used as allowed CORS origin. Replace YOUR-SERVER-IP (or set your reverse-proxy domain)."
+    },
+    {
+      "name": "Allow self-signed certificates",
+      "key": "TS_ALLOW_SELF_SIGNED",
+      "value": "false",
+      "mask": false,
+      "description": "Set to 'true' if your TeamSpeak WebQuery runs over HTTPS with a self-signed certificate."
+    },
+    {
+      "name": "Sidecar URL",
+      "key": "SIDECAR_URL",
+      "value": "http://ts6-sidecar:9800",
+      "mask": false,
+      "description": "Address of the TS6-Manager-Sidecar. The default works together with the --add-host entry in Extra Parameters. Only change it if your sidecar runs elsewhere."
+    },
+    {
+      "name": "Database URL",
+      "key": "DATABASE_URL",
+      "value": "file:/app/packages/backend/data/ts6webui.db",
+      "mask": false,
+      "description": "SQLite database path inside the container. Leave as is."
+    },
+    {
+      "name": "Music directory",
+      "key": "MUSIC_DIR",
+      "value": "/data/music",
+      "mask": false,
+      "description": "Music directory inside the container. Leave as is."
+    },
+    {
+      "name": "Node environment",
+      "key": "NODE_ENV",
+      "value": "production",
+      "mask": false,
+      "description": "Runtime mode. Leave on 'production'."
+    },
+    {
+      "name": "API port",
+      "key": "PORT",
+      "value": "3001",
+      "mask": false,
+      "description": "Internal API port. Must stay 3001 - the frontend's nginx proxies to backend:3001."
+    },
+    {
+      "name": "Access token lifetime",
+      "key": "JWT_ACCESS_EXPIRY",
+      "value": "15m",
+      "mask": false,
+      "description": "Lifetime of login access tokens."
+    },
+    {
+      "name": "Refresh token lifetime",
+      "key": "JWT_REFRESH_EXPIRY",
+      "value": "7d",
+      "mask": false,
+      "description": "Lifetime of refresh tokens (how long you stay logged in)."
+    },
+    {
+      "name": "Container timezone",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Container timezone. Note: cron triggers in bot flows do not use it - they have their own timezone field (default UTC)."
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}

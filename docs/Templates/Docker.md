@@ -29,13 +29,13 @@ Each template can be installed directly from the MOS Hub with a single click.
 | 📚 **BookStack** | Self-hosted wiki & documentation platform | [📖 Guide](Docker/BookStack.html) |
 | 📊 **Calibre** | E-book manager & converter | [📖 Guide](Docker/Calibre.html) |
 | 📚 **Calibre-Web** | Web interface for Calibre library | [📖 Guide](Docker/Calibre-Web.html) |
-| 📝 **Collabora CODE** | Browser-based office suite for Nextcloud | [📖 Guide](Docker/Collabora_CODE.html) |
-| 💻 **Code Server** | Visual Studio Code in the browser | [📖 Guide](Docker/Code_Server.html) |
+| 📝 **Collabora CODE** | Browser-based office suite for Nextcloud | [📖 Guide](Docker/CODE.html) |
+| 💻 **Code Server** | Visual Studio Code in the browser | [📖 Guide](Docker/Code-Server.html) |
 | 🌩️ **Cloudflared** | Cloudflare Tunnel — expose services without open ports | [📖 Guide](Docker/Cloudflared.html) |
 | 🛡️ **CrowdSec** | Open-source intrusion detection system | [📖 Guide](Docker/CrowdSec.html) |
 | 🪵 **Dozzle** | Real-time Docker log viewer | [📖 Guide](Docker/Dozzle.html) |
-| 💬 **Element Web** | Matrix web client for self-hosted chat | [📖 Guide](Docker/Element_Web.html) |
-| 🎮 **Free Games Claimer** | Auto-claim free games on Epic, Prime & GOG | [📖 Guide](Docker/Free_Games_Claimer.html) |
+| 💬 **Element Web** | Matrix web client for self-hosted chat | [📖 Guide](Docker/Element-Web.html) |
+| 🎮 **Free Games Claimer** | Auto-claim free games on Epic, Prime & GOG | [📖 Guide](Docker/Free-Games-Claimer.html) |
 | 🔐 **Gluetun** | VPN client in a container with kill switch | [📖 Guide](Docker/Gluetun.html) |
 | 📄 **Gotenberg** | API for converting documents to PDF | [📖 Guide](Docker/Gotenberg.html) |
 | 📊 **Grafana** | Analytics & monitoring dashboard | [📖 Guide](Docker/Grafana.html) |
@@ -48,7 +48,7 @@ Each template can be installed directly from the MOS Hub with a single click.
 | 🚗 **Lubelogger** | Self-hosted vehicle maintenance & fuel tracker | [📖 Guide](Docker/Lubelogger.html) |
 | 📝 **Maintainerr** | Media library management tool | [📖 Guide](Docker/Maintainerr.html) |
 | 🍽️ **Mealie** | Self-hosted recipe manager | [📖 Guide](Docker/Mealie.html) |
-| ⛏️ **Minecraft Server** | Self-hosted Minecraft server (Vanilla, Paper, Forge & more) | [📖 Guide](Docker/Minecraft_Server.html) |
+| ⛏️ **Minecraft Server** | Self-hosted Minecraft server (Vanilla, Paper, Forge & more) | [📖 Guide](Docker/Minecraft-Server.html) |
 | 📡 **Mosquitto** | Open-source MQTT message broker | [📖 Guide](Docker/Mosquitto.html) |
 | ☁️ **Nextcloud** | Self-hosted cloud storage & collaboration platform | [📖 Guide](Docker/Nextcloud.html) |
 | 🤖 **Ollama** | Run large language models locally | [📖 Guide](Docker/Ollama.html) |
@@ -59,13 +59,14 @@ Each template can be installed directly from the MOS Hub with a single click.
 | 🏅 **Sportarr** | Sports automation tool | [📖 Guide](Docker/Sportarr.html) |
 | 📊 **Tautulli** | Plex Media Server monitoring & analytics | [📖 Guide](Docker/Tautulli.html) |
 | 🎙️ **TeamSpeak 6** | Next-generation voice server (beta) | [📖 Guide](Docker/Teamspeak6.html) |
+| 🎛️ **TS6 Manager** | Web management, music bots & bot flows for TeamSpeak | [📖 Guide](Docker/TS6-Manager.html) |
 | 📊 **Tracearr** | Stream monitoring & analytics for media servers | [📖 Guide](Docker/Tracearr.html) |
 | 🎞️ **Tdarr** | Automated media library management | [📖 Guide](Docker/Tdarr.html) |
 | 📊 **TimescaleDB** | Time-series database extension | [📖 Guide](Docker/TimescaleDB.html) |
 | 🎮 **Twitch-Drops-Miner** | Auto-claim Twitch drops | [📖 Guide](Docker/Twitch-Drops-Miner.html) |
 | 🛠️ **Unifi-Toolkit** | Third-party Unifi network toolkit | [📖 Guide](Docker/Unifi-Toolkit.html) |
 | 🎞️ **Unmanic** | Automated media file optimisation & conversion | [📖 Guide](Docker/Unmanic.html) |
-| 📡 **Uptime Kuma** | Self-hosted uptime & service monitoring | [📖 Guide](Docker/Uptime_Kuma.html) |
+| 📡 **Uptime Kuma** | Self-hosted uptime & service monitoring | [📖 Guide](Docker/Uptime-Kuma.html) |
 | 📶 **Zigbee2MQTT** | Zigbee to MQTT bridge | [📖 Guide](Docker/Zigbee2MQTT.html) |
 
 ---
