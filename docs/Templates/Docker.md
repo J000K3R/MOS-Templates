@@ -48,6 +48,7 @@ Each template can be installed directly from the MOS Hub with a single click.
 | 🎵 **Lidarr** | Music collection manager | [📖 Guide](Docker/Lidarr.html) |
 | 🚗 **Lubelogger** | Self-hosted vehicle maintenance & fuel tracker | [📖 Guide](Docker/Lubelogger.html) |
 | 📝 **Maintainerr** | Media library management tool | [📖 Guide](Docker/Maintainerr.html) |
+| 🔗 **Matter Server** | Matter controller (matter.js) for Home Assistant | [📖 Guide](Docker/Matter-Server.html) |
 | 🍽️ **Mealie** | Self-hosted recipe manager | [📖 Guide](Docker/Mealie.html) |
 | ⛏️ **Minecraft Server** | Self-hosted Minecraft server (Vanilla, Paper, Forge & more) | [📖 Guide](Docker/Minecraft-Server.html) |
 | 📡 **Mosquitto** | Open-source MQTT message broker | [📖 Guide](Docker/Mosquitto.html) |
