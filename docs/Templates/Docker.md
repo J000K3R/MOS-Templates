@@ -52,6 +52,7 @@ Each template can be installed directly from the MOS Hub with a single click.
 | 🍽️ **Mealie** | Self-hosted recipe manager | [📖 Guide](Docker/Mealie.html) |
 | ⛏️ **Minecraft Server** | Self-hosted Minecraft server (Vanilla, Paper, Forge & more) | [📖 Guide](Docker/Minecraft-Server.html) |
 | 📡 **Mosquitto** | Open-source MQTT message broker | [📖 Guide](Docker/Mosquitto.html) |
+| 🔄 **Nebula Sync** | Keep several Pi-hole v6 instances in sync | [📖 Guide](Docker/Nebula-Sync.html) |
 | ☁️ **Nextcloud** | Self-hosted cloud storage & collaboration platform | [📖 Guide](Docker/Nextcloud.html) |
 | 🤖 **Ollama** | Run large language models locally | [📖 Guide](Docker/Ollama.html) |
 | 🐳 **Portainer** | Docker management UI | [📖 Guide](Docker/Portainer.html) |
