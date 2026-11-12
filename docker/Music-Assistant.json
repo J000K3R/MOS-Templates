@@ -1,0 +1,46 @@
+{
+  "name": "Music-Assistant",
+  "repo": "ghcr.io/music-assistant/server:latest",
+  "network": "host",
+  "custom_ip": null,
+  "default_shell": "sh",
+  "privileged": false,
+  "extra_parameters": "--restart=unless-stopped --cap-add=SYS_ADMIN --cap-add=DAC_READ_SEARCH --security-opt apparmor:unconfined",
+  "post_parameters": null,
+  "web_ui_url": "http://[IP]:8095/",
+  "readme_url": "https://j000k3r.github.io/MOS-Templates/docs/Templates/Docker/Music-Assistant.html",
+  "icon": "https://raw.githubusercontent.com/J000K3R/MOS-Templates/main/icons/music-assistant.png",
+  "category": [ "Media", "Home Automation" ],
+  "project": "https://github.com/music-assistant/server",
+  "support": "https://github.com/music-assistant/support/issues",
+  "description": "Music library manager and multi-room player: combines Spotify, Apple Music, Tidal, radio, local files and more, and plays them on Sonos, AirPlay, Chromecast, Squeezebox, Sendspin and other speakers. Integrates with Home Assistant (voice control, media players). Requires host networking for player discovery.",
+  "donate": "https://github.com/sponsors/music-assistant",
+  "paths": [
+    {
+      "name": "Data",
+      "mode": "rw",
+      "host": "/mnt/cache/appdata/music-assistant",
+      "container": "/data",
+      "description": "Music Assistant settings, library database and cache. Back this up."
+    }
+  ],
+  "ports": [],
+  "variables": [
+    {
+      "name": "TZ",
+      "key": "TZ",
+      "value": "Europe/Vienna",
+      "mask": false,
+      "description": "Timezone for the container."
+    },
+    {
+      "name": "Log Level",
+      "key": "LOG_LEVEL",
+      "value": "info",
+      "mask": false,
+      "description": "critical, error, warning, info, debug."
+    }
+  ],
+  "devices": [],
+  "gpus": []
+}
